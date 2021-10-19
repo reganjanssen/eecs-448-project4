@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styleday.css" />
+   <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous">
+    </script> <!---adds trashcan icon-->
+    <title>Fitness App Name</title>
+  </head>
+  <body onload="trackerAlert()">
+  </div>
+
+  <div class="days-list" style="display: inline;">
+  <ul> <!--This will link to a new page and can view the specific day and page, need to change the html names if so-->
+    <li><a href="index.html">Home</a></li>
+    <li><a href="monday.html">Monday</a></li>
+    <li><a href="tuesday.html">Tuesday</a></li>
+    <li><a href="wednesday.html">Wednesday</a></li>
+    <li><a href="thursday.html">Thursday</a></li>
+    <li><a href="friday.html">Friday</a></li>
+    <li><a href="sunday.html">Sunday</a></li>
+  </ul></div>
+
+  <div class="container">
+    <div class="log">
+      <div class="left-half" style="background: lightseagreen;">
+    <header>
+    <h1>Saturday Workout</h1>
+    <h3>Select the type of workout:<button id="cardio" onclick="workoutType(1)">Cardio</button>
+        <button id="strength" onclick="workoutType(2)">Strength</button></h3>
+  
+    <input type="text" id="myInput" placeholder="Add in your exercises..." />
+    <span class="addBtn" id="add_button">Add</span>
+    </header>
+    <ul id="myUL">
+
+    </ul></div></div>
+  
+
+    <div class="right-half">
+      <div class ="upper-half">
+        <p style="padding: 10px; top: 0;  font-size: 10pt;"><strong>Note:</strong> Click on the elements and type some text.</p>
+      <h1 style="text-align: center;">Saturday Mood</h1>
+      <div contentEditable="true"><ul><li>Overall Mood</li></ul></div>
+     <p contentEditable="true" style="margin-left: 20px;">Use this space to type and extra info about your mood</p></div>
+    <br><br><br><br><br><br><br><br><br> <!--probably a better way to position this-->
+   
+      <div class="lower-half">
+      <h1 style="text-align: center;">Soreness</h1>
+      <div contentEditable="true"><ul><li>Overall Soreness</li></ul></div>
+      <p contentEditable="true" style="margin-left: 20px;">Use this space to type and extra info about your soreness</p>
+    </div>
+    </div>
+  </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
