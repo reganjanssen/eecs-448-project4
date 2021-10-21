@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness App Name</title>
+    <link rel="stylesheet" href="timer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <ul> <!--This will link to a new page and can view the specific day and page, need to change the html names if so-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="monday.html">Monday</a></li>
+        <li><a href="tuesday.html">Tuesday</a></li>
+        <li><a href="wednesday.html">Wednesday</a></li>
+        <li><a href="thursday.html">Thursday</a></li>
+        <li><a href="friday.html">Friday</a></li>
+        <li><a href="saturday.html">Saturday</a></li>
+        <li><a href="sunday.html">Sunday</a></li>
+    </ul>    
+    <div class="stopwatch">
+      <h1>Start a Workout</h1>
+      <div class="circle">
+        <span class="time" id="display">00:00:00</span>
+      </div>
+
+      <div class="controls">
+        <button class="buttonPlay">
+          <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+
+          <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
+        </button>
+
+        <button class="buttonReset">
+          <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
+        </button>
+      </div>
+    </div>
+    </div>
+    <script src="timer.js"></script>
+  </body>
+</html>
