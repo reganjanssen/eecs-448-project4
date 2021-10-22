@@ -1,5 +1,6 @@
-// Convert time to a format of hours, minutes, seconds, and milliseconds
+// Timer adapted from author Omar Benseddik
 
+// Function to convert time to a format of hours, minutes, seconds, and milliseconds
 function timeToString(time) {
     let diffInHrs = time / 3600000;
     let hh = Math.floor(diffInHrs);
@@ -20,20 +21,16 @@ function timeToString(time) {
     return `${formattedMM}:${formattedSS}:${formattedMS}`;
   }
   
-  // Declare variables to use in our functions below
-  
-  let startTime;
+  let startTime; 
   let elapsedTime = 0;
   let timerInterval;
   
-  // Create function to modify innerHTML
-  
+  // Function to print the timer on the innerHTML
   function print(txt) {
     document.getElementById("display").innerHTML = txt;
   }
   
-  // Create "start", "pause" and "reset" functions
-  
+  // Functions for "start", "pause" and "reset"
   function start() {
     startTime = Date.now() - elapsedTime;
     timerInterval = setInterval(function printTime() {
@@ -55,16 +52,15 @@ function timeToString(time) {
     showButton("PLAY");
   }
   
-  // Create function to display buttons
-  
+  // Function for button display
   function showButton(buttonKey) {
     const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton;
     const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton;
     buttonToShow.style.display = "block";
     buttonToHide.style.display = "none";
   }
-  // Create event listeners
   
+  // Event Listeners display proper time
   let playButton = document.getElementById("playButton");
   let pauseButton = document.getElementById("pauseButton");
   let resetButton = document.getElementById("resetButton");
