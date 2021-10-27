@@ -83,3 +83,9 @@ function end() {
   resetButton.addEventListener("click", reset);
   endButton.addEventListener("click", end);
 
+//get the workout time.
+function timeLog()
+  {
+      //where we have to set up to? 
+     //document.getElementById("???").innerHTML = "Workout Time : "timeCal;
+  }
