@@ -24,6 +24,7 @@ function timeToString(time) {
   let startTime; 
   let elapsedTime = 0;
   let timerInterval;
+  let timeCal = 0
   
   // Function to print the timer on the innerHTML
   function print(txt) {
@@ -33,10 +34,11 @@ function timeToString(time) {
   // Functions for "start", "pause" and "reset"
   function start() {
     startTime = Date.now() - elapsedTime;
-    timerInterval = setInterval(function printTime() {
-      elapsedTime = Date.now() - startTime;
-      print(timeToString(elapsedTime));
-    }, 10);
+      timerInterval = setInterval(function printTime()
+      {
+        elapsedTime = Date.now() - startTime;
+        print(timeToString(elapsedTime));
+      }, 10);
     showButton("PAUSE");
   }
   
@@ -50,7 +52,17 @@ function timeToString(time) {
     print("00:00:00");
     elapsedTime = 0;
     showButton("PLAY");
-  }
+   }
+// set up the time for workout;
+function end() {
+    timeCal = timeToString(elapsedTime);
+    print("99:99:99");
+    elapsedTime = 0;
+    //set up a back to the main page. And use timeCal to get the work out time;
+    alert("Great! You has been workout : " + timeCal);
+    window.location.href = "../index.html";
+}
+
   
   // Function for button display
   function showButton(buttonKey) {
@@ -64,7 +76,10 @@ function timeToString(time) {
   let playButton = document.getElementById("playButton");
   let pauseButton = document.getElementById("pauseButton");
   let resetButton = document.getElementById("resetButton");
+  let endButton = document.getElementById("endButton");
   
   playButton.addEventListener("click", start);
   pauseButton.addEventListener("click", pause);
   resetButton.addEventListener("click", reset);
+  endButton.addEventListener("click", end);
+
