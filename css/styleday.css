@@ -1,84 +1,222 @@
 body {
   background-color: #F0F6F7FF;
- } 
-  /* for the navigation bar */
-  ul {
-    list-style-type: none;
-    position: -webkit-sticky; /* for safari */
-    position: sticky;
-    text-align: center;
-    top: 0;
-    margin-left:auto;
-    margin-right:auto;
-    overflow: hidden;
-    background-color: lightblue;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: royalblue;
-    text-align: center;
-    padding: 12px 14px;
-    text-decoration: none;
-  }
-  li a:hover {
-    background-color: skyblue;
-  }
-  .left-half {
-    position: absolute;
-    left: 0px;
-    width: 50%;
-    height: 100%;
-    background: #F0F6F7FF;
-  }
-  
-  .right-half {
-    position: absolute;
-    right: 0px;
-    width: 50%;
-    height: 100%;
-    background: #F0F6F7FF;
+} 
+
+ #top {
+  font-family:monospace;
+  font-size: 50px;
+  background-color: rgb(209, 151, 151);
+  padding-top: 10pt;
+  padding-bottom: 10pt;
   }
 
-  .lower-half {
-    bottom: 0;
-    font-family: 'Acme', sans-serif;
-  }
-  .upper-half {
-    top: 0;
-    font-family: 'Acme', sans-serif;
-  }
-   /* Resetting the document */
-* .log{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
+ul {
+  list-style-type: none;
+  position: -webkit-sticky; /* for safari */
+  position: sticky;
+  text-align: center;
+  top: 0;
+  margin-left:auto;
+  margin-right:auto;
+  overflow: hidden;
+  background-color: lightblue;
 }
 
-/* Style the header */
-header {
-  background: #F0F6F7FF;
-  padding: 30px 40px;
-  color: black;
+li {
+  float: left;
+} 
+
+li a {
+  display: block;
+  color: #2460A7FF;
   text-align: center;
+  padding: 12px 15px; 
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  }
+
+li a:hover {
+  background-color: #85B3D1FF;
+}
+.left-half {
+  position: absolute;
+  left: 5px;
+  width: 50%;
+  height: 100%;
+  background: #F0F6F7FF;
+}
+.ll-half {
+  position: absolute;
+  left: 0px;
+  width: 25%;
+  height: 100%;
+  background: #F0F6F7FF;
+  text-align: center;
+}
+.workout-container {
+  overflow: hidden;
+  justify-content: center;
+}
+
+.filterDiv {
+  float: center;
+  color: #ffffff;
+  width: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  background-color: #F0F6F7FF;
+  cursor: pointer;
+  color:#2460A7FF;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.btn:hover {
+  background-color: rgb(209, 151, 151); 
+}
+
+.btn.active {
+  background-color: lightblue;
+  color: #F0F6F7FF;
+}
+
+h3 {
+  text-align: center;
+  color:  #2460A7FF; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+  color:  lightblue;
+  font-size:9pt;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h5{
+  color: #F0F6F7FF;
+  font-size: 10pt;
+}
+
+h4 {
+  color: rgb(209, 151, 151);
+  padding-left: 25pt;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.stopwatch {
+  display: grid;
+  justify-items: center;
+  padding-left: 75px;
+  grid-row-gap: 23px;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#F0F6F7FF;
+  height: 150px;
+  width: 150px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 25px;
+  color: lightblue;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+
+#playButton {
+  display: block;
+}
+
+#pauseButton {
+  display: none;
+}
+
+.container {
+  width: device-width;
+}
+
+.right-half {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  background: #F0F6F7FF;
+}
+
+.left-side {
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  padding-left:75pt;
+}
+
+.right-side {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  padding-right:50pt;
+}
+
+.lower-half {
+  bottom: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.upper-half {
+  top: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+ 
+header {
+  background: #F0F6F7FF;;
+  padding: 20px 30px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
  
 img {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
   height: 50%;
   display:block;
 }
 
 .slidecontainer {
-  width: 98%;
-  padding-left: 5pt;
+  width: 45%;
+  padding-left: 10pt;
 }
 
 .slider {
@@ -114,24 +252,22 @@ img {
 
 h1 {
   font-size: 48px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
-
+  color: #2460A7FF;
   text-align: center;
   line-height: 59px;
-
   padding: 0 64px;
   margin: 0;
 }
 
 h2 {
-  font-size: 34px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
-
+  color: #2460A7FF;
   text-align: center;
   line-height: 59px;
-
   padding: 0 64px;
   margin: 0;
 }
@@ -148,10 +284,80 @@ h2 {
   height: fit-content;
 }
 
-form {
-  font-family: 'Acme', sans-serif;
-  font-size: 12pt;
+/** This will be helpful when adding in water **/
+/* .reset {
+  min-width: 50px;
+  display: block;
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: rgb(209, 151, 151);
+  /* float:left; */
+/* }
+
+.waterAmt {
+  min-width: 50px;
+  display: block;
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: rgb(209, 151, 151);
+  float:left;
+  text-align: center;
+  justify-content: center;
 }
+
+.waterAmt:hover {
+  background-color: lightblue; 
+}
+
+.reset:hover {
+  background-color: lightblue;
+}
+  
+
+.glass {
+  position: relative;
+  border: 1px solid;
+  min-height: 300px;
+  width: 50%;
+  margin: auto 50px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-right: 100pt;
+}
+
+.water {
+  position: absolute;
+  background: #74ccf4;
+  height: 0;
+  bottom: 0;
+  width: 100%;
+  transition: height 2s;
+}
+
+.stats {
+  margin: auto;
+  text-align: center;
+  padding-right: 10pt;
+}
+.stats > *{
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+.water-fill {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  padding-right: 35pt;
+}
+
+.water-fill > *{
+  flex: 1;
+  margin: auto;
+} */ 
 
 
  

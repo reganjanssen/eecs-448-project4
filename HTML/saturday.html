@@ -2,90 +2,191 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../css/styleday.css" />
- 
-    <title>Fitness App Name</title>
+    <title>fitX</title>
   </head>
   <body onload="trackerAlert()">
-  </div>
-
-  <div class="days-list" style="display: inline;">
-  <ul> <!--This will link to a new page and can view the specific day and page-->
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../HTML/tuesday".html">Tuesday</a></li>
-      <li><a href="../HTML/wednesday.html">Wednesday</a></li>
-      <li><a href="../HTML/thursday.html">Thursday</a></li>
-      <li><a href="../HTML/friday.html">Friday</a></li>
-      <li><a href="../HTML/saturday.html">Saturday</a></li>
-      <li><a href="../HTML/sunday.html">Sunday</a></li>
-  </ul></div>
-
-  <div class="container">
-    <div class="log">
-      <div class="left-half">
-    <h1>Saturday Workout</h1>
-    <header>
-    <h3>Select the type of workout: <button id="cardio" onclick="workoutType(1)">Cardio</button>
-      <button id="strength" onclick="workoutType(2)">Strength</button></h3>
-      
-      <form method="get" id="selectWorkout" action="">
-        <label for="selectWorkout"><h3>Choose a workout you would like to do: </h3></label>
-      <select name="selectWorkout" id="selectWorkout">
-      <option value=""></option>
-      <option value="Workout1">Workout 1</option>
-      <option value="Workout2">Workout 2</option>
-      <option value="Workout3">Workout 3</option>
-      <option value="Workout4">Workout 4</option>
-      <option value="Workout5">Workout 5</option></select>
-    </form></header>
-    <button onclick="location.href='../HTML/timer.html'">Start a Workout</button>
-  </div></div>
-  
-    <!-- <input type="text" id="myInput" placeholder="Add in your exercises..." />
-    <span class="addBtn" id="add_button">Add</span>
-    </header>
-    <ul id="myUL">
-
-    </ul></div></div> -->
-  
-
+    <div style= "text-align:center" class=Header>
+        <h1 id="top" style="text-align: right;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1>
+    </div>
+    <div class="container">
     <div class="right-half">
-      <div class ="upper-half">
-        <!-- <p style="padding: 10px; top: 0;  font-size: 10pt;"><strong>Note:</strong> Click on the elements and type some text.</p> -->
-      <h1 style="text-align: center;">Saturday Mood</h1><br><br>
-      <img src="../images/moodscale.jpg" alt="Mood Scale" /><br>
-      <div class="slidecontainer">
-      <input type="range" min="1" max="10" value="5" class="slider" id="myRange"> <p style="padding-left: 25pt;"> Mood: <span id="demo"></span></p>
-      </div>
-      <form id="moodText" method="get">
-        <textarea name="mood" cols="100" rows="8">Use this space to add any extra thoughts about your Mood...</textarea>
-    </form></div>
-     
-    <br><br><br><br><br><br> <!--probably a better way to position this-->
-   
-      <div class="lower-half">
-      <h1 style="text-align: center;">Soreness</h1><br>
-      <div class="soreRating">
-        <form method="get" id="soreness" action="">
-          <label for="soreness" style="padding-left: 25pt;">Choose a soreness rating 1-5 (1 being not sore at all) : </label>
-          <select name="soreness" id="soreness">
-        <option value=" "></option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option></select>
-        <input type="submit" value="submit"> <br><br>
-        </form></div>
-      </div>
-      <form id="soreText" action="" method="get">
-        <textarea name="sore" cols="100" rows="8">Use this space to add any extra details on your Soreness...</textarea>
-    </form>
-    </div>
-    </div>
-  </div>
+        <div class="wellness">
+            <ul class="wellness" style="padding-left: 150pt;">
+            <li><a href="#Mood">Mood</a></li>
+            <li><a href="#Sore">Soreness</a></li>
+            <li><a href="#Water">Water</a></li>
+            <li><a href="#Nutrition">Nutrition</a></li>
+            </ul>
+           <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px">Monday Wellness</h1><br><br>
+        </div>
+       <div class ="upper-half">
+            <h2 id="Mood" style="text-align: center;"><i>Monday Mood</i></h2>
+            <form id="moodText" method="get">
+            <textarea name="mood" cols="75" rows="8">Use this space to add any thoughts about your Mood...</textarea>
+            </form>
+            <br><br>
+            <div class="slidecontainer">
+                <div class="left-side">
+                    <h4> Mood: <span id="demo"></span></h4>
+                    <p style="color:#85B3D1FF;">Use the sliding scale to <br> adjust your moood rating.</p>
+                </div>
+                <div class="right-side">
+                    <img src="../images/moodscale.jpg" alt="Mood Scale" /><br><br>
+                    <input type="range" min="1" max="10" value="5" class="slider" id="myRange"><br><br>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+    
+        <div class="lower-half">
+            <h2 style="text-align: center;" id="Sore"><i>Monday Soreness</i></h2><br>
+            <div class="soreRating">
+                <form method="get" id="soreness" action="">
+                <div class="left-side">
+                <label for="soreness" style="font-size: 9pt;">Choose a soreness rating 1-5 (1 being not sore at all) : </label>
+                <select name="soreness" id="soreness">
+                    <option value=" "></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option></select>
+                    <input type="submit" value="submit"></div>
+                </form>
+            </div>
+            <br><br><br>
+            <form id="soreText" action="" method="get">
+            <textarea name="sore" cols="75" rows="8">Use this space to add any extra details on your Soreness...</textarea>
+            </form>
+            <br><br><br>
+        </div>
 
-    <script src="../js/app.js"></script>
+        <div class="waterTrack" id="Water">
+            <header>
+                <h2><i>Daily Water Tracker</i></h2>
+                <h2 style=" display: none;margin: 30px;">Congrats! You met your daily target.</h2>
+            </header>
+            <div class="stats">
+                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Date:<span id=curdate></span></p>
+                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;4L</span></p>
+                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Today's intake:<span id=curIntake></span></p>
+            </div>
+            <!--This will be used for the water tracker-->
+            <!-- <div class="water-fill">
+                <div class="water-buttons">
+                    <button onclick="fill(.25)" class="waterAmt">250ml</button>
+                    <button onclick="fill(.5)" class="waterAmt">500ml</button>
+                    <button onclick="fill(1)" class="waterAmt">1L</button>
+                    <button onclick="fill(2)" class="waterAmt">2L</button>
+                    <button onclick="fill(0)" class="reset">Reset</button>
+                </div>
+                <div class="water-container">
+                    <div class="glass">
+                        
+                        <div class="water">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div> -->
+    </div>
+     
+    <div class="left-half">
+        <div class="workout">
+            <ul> <!--This will link to a new page and can view the specific day and page-->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../HTML/monday.html">Monday</a></li>
+                <li><a href="../HTML/tuesday.html">Tuesday</a></li>
+                <li><a href="../HTML/thursday.html">Thursday</a></li>
+                <li><a href="../HTML/friday.html">Friday</a></li>
+                <li><a href="../HTML/saturday.html">Saturday</a></li>
+            </ul>  
+                <header style="background-color: rgb(209, 151, 151);; padding-left: 90pt;">
+                <h1 style="text-align: center; padding-right: 5pt;">Wednesday Workout</h1></header></div>
+                <div class="ll-half"><header style="background-color: #85B3D1FF;">
+                    <div id="myBtnContainer" style="display: inline-block;">
+                        <h3>Choose a workout:</h3>
+                        <p style="font-size: smaller;">Select the type of workout:<br><br></p>
+                            <button class="btn active" onclick="loadWorkout('all')">All Workouts</button><br><br>
+                            <button class="btn" onclick="loadWorkout('strength')">Strength</button><br><br>
+                            <button class="btn" onclick="loadWorkout('cardio')">Cardio</button>
+                    </div>
+                    <div class="workout-container">
+                        <div class="filterDiv strength" id="Workout1">
+                            <button onclick="workoutDisplay(1)">
+                                <h5>Workout 1: </h5>
+                                <p>Row: 3x12<br>
+                                Push-Up: 3x15<br>
+                                </p>
+                            </button>
+                        </div>
+                        <div class="filterDiv strength" id="Workout2">
+                            <button>
+                                <h5>Workout 2: 
+                                <p>Curls: 3x12<br>
+                                Shoulder Press: 3x15<br>
+                                </p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv strength" id="Workout3">
+                            <button>
+                                <h5>Workout 3:
+                                <p>Bicep Curls: 3x12<br>
+                                Shoulder Press: 3x15<br>
+                                Squats: 4x10<br>
+                                Lunges: 3x8<br></p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv cardio" id="Workout4">
+                            <button>
+                                <h5>Workout 4:
+                                <p>Walk:<br>
+                                3.5 mph pace</p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv cardio" id="Workout5">
+                            <button>
+                                <h5>Workout 5:
+                                <p>Bike:<br>
+                                30 minutes</p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv cardio" id="Workout6">
+                            <button>
+                                <h5>Workout 6:
+                                <p>Run:<br>
+                                3 miles</p></h5>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rl-half" style="height:100%">
+                    <header style="background-color:#2460A7FF;">
+                    <div class="stopwatch">
+                        <h1 style="font-size:30pt; color:lightblue">Start Workout</h1>
+                            <div class="circle">
+                                <span class="time" id="display">00:00:00</span>
+                            </div>
+                    <div class="controls">
+                        <button class="buttonPlay">
+                            <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+                            <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
+                        </button>
+                        <button class="buttonReset">
+                            <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
+                        </button>
+                    </div>
+                    </div>
+                    </header><br><br><br>
+                </div>
+    </div>
+    </div>
+
+<script src="../js/timer.js"></script>
+<script src="../js/app.js"></script>
 </body>
 </html>
