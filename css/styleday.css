@@ -22,9 +22,12 @@ ul {
   background-color: lightblue;
 }
 
-li {
+.right-half li {
   float: left;
 } 
+.left-half li {
+  float: left;
+}
 
 li a {
   display: block;
@@ -190,7 +193,7 @@ button {
 }
 
 .lower-half {
-  bottom: 0;
+  /* bottom: 0; */
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -200,7 +203,7 @@ button {
 }
  
 header {
-  background: #F0F6F7FF;;
+  background: #F0F6F7FF;
   padding: 20px 30px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -285,15 +288,15 @@ h2 {
 }
 
 /** This will be helpful when adding in water **/
-/* .reset {
+.reset {
   min-width: 50px;
   display: block;
   padding: 15px;
   font-size: 15px;
   cursor: pointer;
-  background-color: rgb(209, 151, 151);
+  color:#85B3D1FF;
   /* float:left; */
-/* }
+ }
 
 .waterAmt {
   min-width: 50px;
@@ -301,10 +304,10 @@ h2 {
   padding: 15px;
   font-size: 15px;
   cursor: pointer;
-  background-color: rgb(209, 151, 151);
   float:left;
   text-align: center;
   justify-content: center;
+  color:#086fc4;
 }
 
 .waterAmt:hover {
@@ -314,51 +317,107 @@ h2 {
 .reset:hover {
   background-color: lightblue;
 }
-  
-
-.glass {
-  position: relative;
-  border: 1px solid;
-  min-height: 300px;
-  width: 50%;
-  margin: auto 50px;
-  border-top: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding-right: 100pt;
-}
-
-.water {
-  position: absolute;
-  background: #74ccf4;
-  height: 0;
-  bottom: 0;
-  width: 100%;
-  transition: height 2s;
-}
 
 .stats {
   margin: auto;
   text-align: center;
-  padding-right: 10pt;
 }
 .stats > *{
   margin: 10px auto;
   font-size: 20px;
 }
 
-.water-fill {
-  display: flex;
-  justify-content: space-evenly;
-  flex: 1;
-  padding-right: 35pt;
+#myInput {
+  width: 75%;
+  margin-left: 0;
+  padding:10px;
+  border: none;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.water-fill > *{
-  flex: 1;
-  margin: auto;
-} */ 
+.addBtn {
+  width: 25%;
+  padding: 10px;
+  margin-left:0;
+  background: #85B3D1FF;
+  color: #F0F6F7FF;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
 
+.addBtn:hover {
+  background-color: lightblue;
+  color: #F0F6F7FF;
+}
+
+/* Style the list items */
+.foodTracker ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 15px 40px 15px 40px;
+  list-style-type: none;
+  background: #85B3D1FF;
+  font-size: 14px;
+  transition: 0.2s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float:none;
+  width: 80%;
+  color:#2460A7FF;;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.foodTracker ul{
+  text-align: left;
+  margin-left:auto;
+  margin-right:auto;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.foodTracker ul li:nth-child(odd) {
+  background: lightblue;
+}
+
+/* Darker background-color on hover */
+.foodTracker ul li:hover {
+  background: skyblue;
+}
+
+
+
+/* trash button */
+.far {
+  position: absolute;
+  right: 0;
+  padding: 10px 16px 12px 16px;
+}
+
+.far:hover {
+  color: white;
+}
+footer {
+  left: 0;
+  position: fixed;
+  text-align: left;
+  width: 100%;
+  color:#2460A7FF;
+  font-family: monospace;
+  bottom: 0px;
+}
+footer h1 {
+  margin: 0;
+  text-decoration: none;
+}
 
  
 

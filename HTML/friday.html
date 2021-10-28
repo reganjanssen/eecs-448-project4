@@ -4,6 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../css/styleday.css" />
+    <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous">
+    </script>
     <title>fitX</title>
   </head>
   <body onload="trackerAlert()">
@@ -19,10 +21,10 @@
             <li><a href="#Water">Water</a></li>
             <li><a href="#Nutrition">Nutrition</a></li>
             </ul>
-           <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px">Monday Wellness</h1><br><br>
+           <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px">Friday Wellness</h1><br><br>
         </div>
        <div class ="upper-half">
-            <h2 id="Mood" style="text-align: center;"><i>Friday Mood</i></h2>
+            <h2 id="Mood">Mood</h2>
             <form id="moodText" method="get">
             <textarea name="mood" cols="75" rows="8">Use this space to add any thoughts about your Mood...</textarea>
             </form>
@@ -41,60 +43,56 @@
         </div>
     
         <div class="lower-half">
-            <h2 style="text-align: center;" id="Sore"><i>Friday Soreness</i></h2><br>
+            <h2 id="Sore">Soreness</h2>
             <div class="soreRating">
-                <form method="get" id="soreness" action="">
-                <div class="left-side">
-                <label for="soreness" style="font-size: 9pt;">Choose a soreness rating 1-5 (1 being not sore at all) : </label>
-                <select name="soreness" id="soreness">
+                <form method="get" id="soreness" action="" style="padding-left:20%">
+                <label for="soreness" style="font-size: 8pt;color:#2460A7FF;">Choose a soreness rating 1-5 (1 being not sore at all) :</label>
+                <select name="soreness" id="soreness" >
                     <option value=" "></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option></select>
-                    <input type="submit" value="submit"></div>
                 </form>
-            </div>
-            <br><br><br>
+            <br>
             <form id="soreText" action="" method="get">
-            <textarea name="sore" cols="75" rows="8">Use this space to add any extra details on your Soreness...</textarea>
+            <textarea name="sore" cols="75" rows="8">Use this space to add any extra details on your Soreness...</textarea><br>
+            <input type="submit" value="submit" style="background-color: lightblue; font-size:8px; width:20%;color:#2460A7FF;">
             </form>
-            <br><br><br>
+            <br><br>
         </div>
-
+        </div>
         <div class="waterTrack" id="Water">
-            <header>
-                <h2><i>Daily Water Tracker</i></h2>
-                <h2 style=" display: none;margin: 30px;">Congrats! You met your daily target.</h2>
-            </header>
+                <h2>Water Log</h2>
             <div class="stats">
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Date:<span id=curdate></span></p>
-                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;4L</span></p>
+                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;3L</span></p>
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Today's intake:<span id=curIntake></span></p>
             </div>
-            <!--This will be used for the water tracker-->
-            <!-- <div class="water-fill">
+            <!-- This will be used for the water tracker-->
+            <div class="water-fill" style="padding-left:26.5%">
                 <div class="water-buttons">
                     <button onclick="fill(.25)" class="waterAmt">250ml</button>
                     <button onclick="fill(.5)" class="waterAmt">500ml</button>
+                    <button onclick="fill(.75)" class="waterAmt">750ml</button>
                     <button onclick="fill(1)" class="waterAmt">1L</button>
-                    <button onclick="fill(2)" class="waterAmt">2L</button>
                     <button onclick="fill(0)" class="reset">Reset</button>
                 </div>
-                <div class="water-container">
-                    <div class="glass">
-                        
-                        <div class="water">
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div> -->
+            <br><br>
+        </div>  
+        <div class="foodTracker" id="Nutrition">
+           <header><h2>Nutrition Log</h2>
+            <input type="text" id="myInput" placeholder="Add in your food intake..." />
+            <span class="addBtn" id="add_button">Add</span>
+                <ul id="myUL">
+
+                    </ul></header>
+                    <br><br><br><br><br><br><br><br><br><br><br><br>  
+        </div>
     </div>
     </div>
-     
+    
     <div class="left-half">
         <div class="workout">
             <ul> <!--This will link to a new page and can view the specific day and page-->
@@ -118,11 +116,11 @@
                     </div>
                     <div class="workout-container">
                         <div class="filterDiv strength" id="Workout1">
-                            <button onclick="workoutDisplay(1)">
-                                <h5>Workout 1: </h5>
+                            <button>
+                                <h5>Workout 1: 
                                 <p>Row: 3x12<br>
                                 Push-Up: 3x15<br>
-                                </p>
+                                </p></h5>
                             </button>
                         </div>
                         <div class="filterDiv strength" id="Workout2">
@@ -184,10 +182,17 @@
                     </div>
                     </div>
                     </header><br><br><br>
-                </div>
-    </div>
-    </div>
 
+                  <div class="workout-display" id="workout-display">
+                      <h2></h2>
+                  </div>  
+                </div>
+        </div> 
+        <footer>
+        <h1 style="font-size: smaller;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
+        </footer>
+    </div>
+    
 <script src="../js/timer.js"></script>
 <script src="../js/app.js"></script>
 </body>
