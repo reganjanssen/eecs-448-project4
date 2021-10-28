@@ -16,4 +16,4 @@
 <h2>User Instructions:</h2>
   <small> To open the app, download the zip file on the repository. In your downloads folder open the index.html file, this will take you to your preferred web-browser. Once in the web-browser you can simply switch from day-to-day by clicking on the links at the top of the page.</small>
   <h2>Next Steps:</h2>
-  <small> The next step for the project will be to add the backend features so we can save the elements entered by the user, we will also be implementing our final tracking elements (water-log and nutrition-log) and adding in more workouts as well as a way for users to create their own workout.</small>
+  <small> The next step for the project will be to add the backend features so we can save the elements entered by the user, we will also be implementing our final tracking elements and adding in more workouts as well as a way for users to create their own workout.</small>
