@@ -1,5 +1,4 @@
 body {
-  font-family: monospace;
   background-color: #F0F6F7FF;
 }
 
@@ -73,7 +72,7 @@ background-color: skyblue;
 
 h1 {
 font-size: 48px;
-font-family: monospace;
+font-family: 'Courier New', Courier, monospace;
 font-weight: 200;
 color: #2460A7FF;
 text-align: center;
@@ -91,7 +90,7 @@ text-align: center;
 
 h2 {
 font-size: 30px;
-font-family: monospace;
+font-family: 'Courier New', Courier, monospace;
 font-weight: 150;
 color: rgb(209, 151, 151);
 text-align: center;
@@ -112,6 +111,6 @@ color: lightblue;
 
 .footer {
 color:#2460A7FF;
-font-family: monospace;
+font-family: 'Courier New', Courier, monospace;
 text-align: center;
 }
