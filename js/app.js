@@ -103,33 +103,93 @@ function trackerAlert(){
       this.className += " active";
     });
   }
-  
-  // For the water tracker
-  // const totalVolume = 4
-  // const totalHeight = 300
-  // let totalIntake = 0
-  // const water = document.querySelector('.water')
-  // const h2 = document.querySelector('h2')
-  // const curdate = document.querySelector('#curdate')
-  // const curIntake = document.querySelector('#curIntake')
-          
-  // water.addEventListener('transitionend', () => {
-  //   console.log('transition end')
-  //   if (totalIntake == 4) {
-  //     h2.style.display = 'block'
-  //   }
-  // })
-  
-  // curdate.innerHTML = '&nbsp;' + new Date().toDateString()
-  // curIntake.innerHTML = '&nbsp;' + '0L'
-  //   function fill(qty) {
-  //     if (qty) {
-  //       totalIntake += qty
-  //     } 
-  //       else {
-  //         totalIntake = 0
-  //       }
-  // curIntake.innerHTML = '&nbsp;' + totalIntake + 'L'
-  //   const increment = totalHeight/totalVolume * totalIntake
-  //   water.style.height = increment + 'px'
-  // }
+  //For the water tracker
+let totalIntake = 0
+const curdate = document.querySelector('#curdate') // this can be moved elswhere to display date
+const curIntake = document.querySelector('#curIntake')
+        
+curdate.innerHTML = '&nbsp;' + new Date().toDateString()
+curIntake.innerHTML = '&nbsp;' + '0L'
+  function fill(qty) {
+    if (qty) {
+      totalIntake += qty
+    } 
+      else {
+        totalIntake = 0
+      }
+
+curIntake.innerHTML = '&nbsp;' + totalIntake + 'L'
+}
+
+// Nutrition tracker
+const foodList = [];
+
+const foodListElement = document.querySelector("#myUL");
+
+document.querySelector("#add_button").addEventListener("click", addFood);
+document.querySelector("#myInput").addEventListener("keydown", function(e) {
+  if (e.keyCode == 13) {
+    addFood()
+  }
+});
+// inserts added inputs to array of objects
+function addFood() {
+  const foodText = document.querySelector("#myInput").value;
+
+  if (foodText == "") {
+    alert("No item entered");
+  } else {
+    const foodObject = {
+      id: foodList.length,
+      foodText: foodText,
+      // isDone: false,  // this is for a check off type list
+    };
+    foodList.unshift(foodObject); // adds new items to top of list
+    displayFood();
+  }
+}
+
+// delete item on food list
+function deleteItem(x) {
+  foodList.splice(
+    foodList.findIndex((item) => item.id == x),
+    1
+  );
+  displayFood();
+}
+
+// Displays the items to the screen
+function displayFood() {
+  foodListElement.innerHTML = "";
+  document.querySelector("#myInput").value = "";
+
+  foodList.forEach((item) => {
+    const listElement = document.createElement("li");
+    const delBtn = document.createElement("i");
+
+    listElement.innerHTML = item.foodText;
+    listElement.setAttribute("data-id", item.id);
+
+    delBtn.setAttribute("data-id", item.id);
+    delBtn.classList.add("far");
+    delBtn.classList.add("fa-trash-alt");
+    delBtn.setAttribute("data-id", item.id);
+
+    if (item.isDone) {
+      listElement.classList.add("checked");
+    }
+
+    listElement.addEventListener("click", function (e) {
+      const selectedId = e.target.getAttribute("data-id");
+      doneFood(selectedId);
+    });
+
+    delBtn.addEventListener("click", function (e) {
+      const delId = e.target.getAttribute("data-id");
+      deleteItem(delId);
+    });
+
+    foodListElement.appendChild(listElement);
+    listElement.appendChild(delBtn);
+  });
+}
