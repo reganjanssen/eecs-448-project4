@@ -7,7 +7,7 @@ font-family:monospace;
 font-size: 50px;
 background-color: rgb(209, 151, 151);
 padding-top: 10pt;
-padding-bottom: 10pt;
+padding-bottom: 6pt;
 }
 
 table {
@@ -53,6 +53,7 @@ margin-left:auto;
 margin-right:auto;
 overflow: hidden;
 background-color: lightblue;
+font-family:'Courier New', Courier, monospace;
 }
 
 li {
