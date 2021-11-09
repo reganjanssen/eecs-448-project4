@@ -1,4 +1,4 @@
-# Project 3: fitX <sub><sub>by RJCAN</sub></sub>
+# Project 4: fitX <sub><sub>by RJCAN</sub></sub>
 <h4> Group 17 - EECS 448</h4>
 <small> This program contains a fitness/lifestyle tracking app written in JavaScript, html, and css. </small>
 <h2>Welcome to fitX!</h2>
