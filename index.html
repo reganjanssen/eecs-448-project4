@@ -1,3 +1,10 @@
+<!--
+File Name: index.html
+Authors: Regan Janssen, Andrew Loaiza, Chen Lu, Jui Nagarkar, Natasha Shirley
+Description: Home page for the fitX application
+Date: Nov. 18, 2021
+-->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,7 +17,7 @@
         <div style= "text-align:center" class=Header>
             <h1 id="top" style="text-align: right;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1>
         </div>
-                <ul> <!--This will link to a new page and can view the specific day and page, need to change the html names if so-->
+                <ul> <!--This will link to a new page associated with each day-->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="HTML/monday.html">Monday</a></li>
                     <li><a href="HTML/tuesday.html">Tuesday</a></li>
@@ -27,11 +34,12 @@
                     <textarea name="summary" cols="180" rows="10">Your weekly summary will be shown here...</textarea>
                 </form><br><br>
                 <h2 style="text-align: left; font-size: 20pt; color: #2460A7ff"">Select items to fill out your to do list: </h2><br><br>
+               
+               <!--This next section of code contains the set-up for each table with its associated day-->
                 <div style="float: left; padding-left: 100pt;">
                 <h2 id="Monday">Monday</h2>
                 <p style ="text-align: center;">
                     <table style="float:left">
-                        <!--label for="select-activity">Select an Activity:</label-->
                         <tr>
                             <th>Time</th>
                             <th>Activity</th>
@@ -42,9 +50,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -52,9 +61,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -62,9 +72,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -72,9 +83,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -82,9 +94,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -92,9 +105,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -102,9 +116,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -112,9 +127,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -122,9 +138,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -132,9 +149,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -142,9 +160,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -152,11 +171,24 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                     </table></p></div>
+                    <div style="float: right; padding-right: 100pt;">
                 <h2 id="Tuesday" style ="text-align: center;">Tuesday</h2>
                 <p style ="text-align: center;">
                     <table>
@@ -170,9 +202,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -180,9 +213,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -190,9 +224,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -200,9 +235,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -210,9 +246,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -220,9 +257,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -230,9 +268,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -240,9 +279,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -250,9 +290,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -260,9 +301,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -270,9 +312,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -280,11 +323,23 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
-                    </table></p>
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                    </table></p></div>
                     <div style="float: left; padding-left: 100pt;">
                     <h2 id="Wednesday" style ="text-align: center;">Wednesday</h2>
                 <p style ="text-align: center;">
@@ -299,9 +354,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -309,9 +365,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -319,9 +376,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -329,9 +387,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -339,9 +398,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -349,9 +409,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -359,9 +420,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -369,9 +431,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -379,9 +442,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -389,9 +453,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -399,9 +464,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -409,11 +475,24 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                     </table></p></div>
+                    <div style="float: right; padding-right: 100pt;">
                     <h2 id="Thursday" style ="text-align: center;">Thursday</h2>
                 <p style ="text-align: center;">
                     <table>
@@ -427,9 +506,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -437,9 +517,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -447,9 +528,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -457,9 +539,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -467,9 +550,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -477,9 +561,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -487,9 +572,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -497,9 +583,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -507,9 +594,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -517,9 +605,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -527,9 +616,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -537,11 +627,23 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
-                    </table></p>
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                    </table></p></div>
                     <div style="float: left; padding-left: 100pt;">
                     <h2 id="Friday" style ="text-align: center;">Friday</h2>
                 <p style ="text-align: center;">
@@ -556,9 +658,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -566,9 +669,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -576,9 +680,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -586,9 +691,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -596,9 +702,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -606,9 +713,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -616,9 +724,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -626,9 +735,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -636,9 +746,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -646,9 +757,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -656,9 +768,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -666,11 +779,24 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                     </table></p></div>
+                    <div style="float: right; padding-right: 100pt;">
                     <h2 id="Saturday" style ="text-align: center;">Saturday</h2>
                 <p style ="text-align: center;">
                     <table>
@@ -684,9 +810,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -694,9 +821,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -704,9 +832,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -714,9 +843,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -724,9 +854,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -734,9 +865,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -744,9 +876,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -754,9 +887,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -764,9 +898,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -774,9 +909,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -784,9 +920,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -794,11 +931,24 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
-                    </table></p>
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                    </table></p></div>
+                    <div style="float: right; padding-top: 50%;">
                     <h2 id="Sunday" style ="text-align: center;">Sunday</h2>
                 <p style ="text-align: center;">
                     <table>
@@ -812,9 +962,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>7am - 8am</td>
@@ -822,9 +973,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>8am - 9am</td>
@@ -832,9 +984,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even"> 
                             <td>9am - 10am</td>
@@ -842,9 +995,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>10am - 11am</td>
@@ -852,9 +1006,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>11am - 12pm</td>
@@ -862,9 +1017,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>12pm - 1pm</td>
@@ -872,9 +1028,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>1pm - 2pm</td>
@@ -882,9 +1039,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>2pm - 3pm</td>
@@ -892,9 +1050,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>3pm - 4pm</td>
@@ -902,9 +1061,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr>
                             <td>4pm - 5pm</td>
@@ -912,9 +1072,10 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
                         <tr class="even">
                             <td>5pm - 6pm</td>
@@ -922,12 +1083,24 @@
                                 <select name="select-activity" id="select-activity">
                                 <option value="  "></option>
                                 <option value="Workout">Workout</option>
-                                <option value="School">School</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
                                 <option value="Freetime">Freetime</option>
-                                <option value="Rest">Rest</option></select></td>
+                                <option value="Friends">Friends</option></select></td>
                         </tr>
-                    </table></p>
-                <p style="text-align: center;"><a href="#top">Top</a></p>      
+                        <tr>
+                            <td>6pm - 7pm</td>
+                            <td>
+                                <select name="select-activity" id="select-activity">
+                                <option value="  "></option>
+                                <option value="Workout">Workout</option>
+                                <option value="Class">Class</option>
+                                <option value="Study">Study</option>
+                                <option value="Freetime">Freetime</option>
+                                <option value="Friends">Friends</option></select></td>
+                        </tr>
+                    </table></p></div>
+                <p style="text-align: center;"><a href="#top">Top</a></p> <!--Allows you to go back to the top of the page easily-->     
                 <footer>
                     <header style="background-color:rgb(209, 151, 151);">
                     <h2 style="color:#2460A7ff"><i>fitX<sub style="font-size: 9pt;">by RJCAN</sub></i></h2></header>

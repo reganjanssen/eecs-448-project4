@@ -1,10 +1,18 @@
+<!--
+File Name: friday.html
+Authors: Regan Janssen, Andrew Loaiza, Chen Lu, Jui Nagarkar, Natasha Shirley
+Description: Friday interface for fitX app
+Date: Nov. 18, 2021
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../css/styleday.css" />
-    <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous">
+    <!--This is for the trash can icon for the food tracker-->
+    <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous"> 
     </script>
     <title>fitX</title>
   </head>
@@ -12,10 +20,15 @@
     <div style= "text-align:center" class=Header>
         <h1 id="top" style="text-align: right;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1>
     </div>
+    <!--
+        The container class is split up into two parts: the left and right half. 
+        The left half contains the workout section and the right half is the wellness section.
+        Each half contains its own subset of class as can be seen by the div elements.
+    -->
     <div class="container">
     <div class="right-half">
         <div class="wellness">
-            <ul class="wellness" style="padding-left: 150pt;">
+            <ul class="wellness" style="padding-left: 150pt;"> <!--This will link to the different sections within the webpage-->
             <li><a href="#Mood">Mood</a></li>
             <li><a href="#Sore">Soreness</a></li>
             <li><a href="#Water">Water</a></li>
@@ -23,6 +36,7 @@
             </ul>
            <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px">Friday Wellness</h1><br><br>
         </div>
+         <!-- This div is for mood tracking-->
        <div class ="upper-half">
             <h2 id="Mood">Mood</h2>
             <form id="moodText" method="get">
@@ -44,6 +58,7 @@
     
         <div class="lower-half">
             <h2 id="Sore">Soreness</h2>
+             <!-- This div is for soreness tracking-->
             <div class="soreRating">
                 <form method="get" id="soreness" action="" style="padding-left:20%">
                 <label for="soreness" style="font-size: 8pt;color:#2460A7FF;">Choose a soreness rating 1-5 (1 being not sore at all) :</label>
@@ -63,6 +78,7 @@
             <br><br>
         </div>
         </div>
+         <!-- This div is for water tracking-->
         <div class="waterTrack" id="Water">
                 <h2>Water Log</h2>
             <div class="stats">
@@ -70,7 +86,7 @@
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;3L</span></p>
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Today's intake:<span id=curIntake></span></p>
             </div>
-            <!-- This will be used for the water tracker-->
+           
             <div class="water-fill" style="padding-left:26.5%">
                 <div class="water-buttons">
                     <button onclick="fill(.25)" class="waterAmt">250ml</button>
@@ -81,6 +97,7 @@
                 </div>
             <br><br>
         </div>  
+         <!-- This div is for food tracking-->
         <div class="foodTracker" id="Nutrition">
            <header><h2>Nutrition Log</h2>
             <input type="text" id="myInput" placeholder="Add in your food intake..." />
@@ -107,6 +124,7 @@
                 <header style="background-color: rgb(209, 151, 151);; padding-left: 90pt;">
                 <h1 style="text-align: center; padding-right: 5pt;">Friday Workout</h1></header></div>
                 <div class="ll-half"><header style="background-color: #85B3D1FF;">
+                    <!--This div is for the left-side of workout display-->
                     <div id="myBtnContainer" style="display: inline-block;">
                         <h3>Choose a workout:</h3>
                         <p style="font-size: smaller;">Select the type of workout:<br><br></p>
@@ -163,7 +181,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!--This div is for right half of workout display-->
                 <div class="rl-half" style="height:100%">
                     <header style="background-color:#2460A7FF;">
                     <div class="stopwatch">

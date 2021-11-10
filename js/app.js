@@ -1,3 +1,10 @@
+/**
+File Name: app.js
+Authors: Regan Janssen, Andrew Loaiza, Chen Lu, Jui Nagarkar, Natasha Shirley
+Description: JavaScript program that contains the functionality for the fitX application
+Date: Nov. 18, 2021
+*/
+
 let strengthWork;
 let reps;
 let weight;
@@ -44,11 +51,16 @@ function weeklySummary()
     var textarea = document.getElementById("weeklySummary");
     textarea.innerHTML = "Cardio summary: " + cardioSummary + "Strength summary: " + strengthSummary;
 }
-// On load alerts the user to remember to track items
+
+// On load alerts for the day.html files when it is first loaded
 function trackerAlert(){
-    alert("Don't forget to log your mood and soreness!")
+    alert("Don't forget to log your wellness!")
   }
   
+  /**************************************************************************************************/
+  /**
+   * The following block of code pertains to the mood slider
+   */
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
   output.innerHTML = slider.value;
@@ -56,14 +68,18 @@ function trackerAlert(){
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
-  
-  // Function to display the select workout type
+  /**************************************************************************************************/
+
+  /**
+   * The following block of code pertains to the filtering of workouts on the left half of workout div
+   */
   loadWorkout("all")
+  // Function to display the select workout type
   function loadWorkout(c) {
     var x, i;
     x = document.getElementsByClassName("filterDiv");
     if (c == "all") c = "";
-    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    // Adds show class to filtered elements, and removes show class from elements not selected
     for (i = 0; i < x.length; i++) {
       RemoveClass(x[i], "show");
       if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
@@ -92,7 +108,6 @@ function trackerAlert(){
     }
     element.className = arr1.join(" ");
   }
-  
   // Adds active class to the current control button
   var btnContainer = document.getElementById("myBtnContainer");
   var btns = btnContainer.getElementsByClassName("btn");
@@ -103,36 +118,44 @@ function trackerAlert(){
       this.className += " active";
     });
   }
-  //For the water tracker
+  /**************************************************************************************************/
+  /**
+   * The following block of code pertains to the water tracker
+   */
 let totalIntake = 0
 const curdate = document.querySelector('#curdate') // this can be moved elswhere to display date
 const curIntake = document.querySelector('#curIntake')
         
 curdate.innerHTML = '&nbsp;' + new Date().toDateString()
 curIntake.innerHTML = '&nbsp;' + '0L'
-  function fill(qty) {
+  // Takes in the amount of water specified and adds it to the total intake
+function fill(qty) {
     if (qty) {
       totalIntake += qty
     } 
       else {
         totalIntake = 0
       }
-
+// Displays the current intake
 curIntake.innerHTML = '&nbsp;' + totalIntake + 'L'
 }
 
-// Nutrition tracker
-const foodList = [];
+/**************************************************************************************************/
+/** 
+ * The following block of code pertains to the food tracker.
+ **/
 
+const foodList = [];
 const foodListElement = document.querySelector("#myUL");
 
+// add food to the list by hitting enter or using the add button
 document.querySelector("#add_button").addEventListener("click", addFood);
 document.querySelector("#myInput").addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
     addFood()
   }
 });
-// inserts added inputs to array of objects
+// inserts added inputs to food object
 function addFood() {
   const foodText = document.querySelector("#myInput").value;
 
@@ -142,14 +165,12 @@ function addFood() {
     const foodObject = {
       id: foodList.length,
       foodText: foodText,
-      // isDone: false,  // this is for a check off type list
     };
     foodList.unshift(foodObject); // adds new items to top of list
     displayFood();
   }
 }
-
-// delete item on food list
+// delete item on food list using the trashcan icon
 function deleteItem(x) {
   foodList.splice(
     foodList.findIndex((item) => item.id == x),
@@ -157,8 +178,7 @@ function deleteItem(x) {
   );
   displayFood();
 }
-
-// Displays the items to the screen
+// function to display the food items in a list. Takes in the user input, returns a list of items
 function displayFood() {
   foodListElement.innerHTML = "";
   document.querySelector("#myInput").value = "";
@@ -193,3 +213,4 @@ function displayFood() {
     listElement.appendChild(delBtn);
   });
 }
+/**************************************************************************************************/
