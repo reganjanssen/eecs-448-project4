@@ -56,6 +56,13 @@ function weeklySummary()
 function trackerAlert(){
     alert("Don't forget to log your wellness!")
   }
+
+  // Date selector for day.html files, will dislay the data from the specified day
+  var dateControl = document.querySelector('input[type="date"]');
+  
+  function loadDay() {
+    document.getElementById('selectedDate').innerHTML = dateControl.value;
+  }
   
   /**************************************************************************************************/
   /**
