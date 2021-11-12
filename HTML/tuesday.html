@@ -16,8 +16,17 @@ Date: Nov. 18, 2021
     <title>fitX</title>
   </head>
   <body onload="trackerAlert()">
-    <div style= "text-align:center" class=Header>
-        <h1 id="top" style="text-align: right;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1>
+    <div id="top">
+        <div style= "float:right; padding-right: 25px; padding-bottom: 20px;" class=Header>
+            <img src="../images/fitX.png" style="width:100px;height:60px;"/>
+        <!-- <h1 style="text-align: right; font-weight: bold;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1> -->
+        </div>
+        <div class="date" >
+            <label for="start">Select a day:</label>
+            <input type="date" id="displayDate" name="display-date" style="color:#2460A7FF" value=" "min="2021-08-10" max=" ">
+            <button type="submit" id="dateBtn" onclick="loadDay()">select</button>
+            <p id="selectedDate">Selected Date <span id="date"></span></p>
+        </div>
     </div>
     <!--
         The container class is split up into two parts: the left and right half. 

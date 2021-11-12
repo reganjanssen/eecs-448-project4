@@ -4,22 +4,24 @@ body {
 
  #top {
   font-family:monospace;
-  font-size: 50px;
   background-color: rgb(209, 151, 151);
-  padding-top: 10pt;
-  padding-bottom: 10pt;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-weight: bolder;
   }
 .date {
-  padding-left: 25px;
+  padding-left: 20px;
   font-size: 15px;
   font-family: 'Courier New', Courier, monospace;
   color:#2460A7FF;
   background-color: rgb(209, 151, 151);
-  text-align: center;
+  text-align: left;
   }
 #selectedDate {
-  color: #086fc4;
+  color: #F0F6F7FF;
   font-size: 16px;
+  text-align:center;
+  padding-left: 175px;
   }
 #dateBtn {
   padding-left: 10px;
