@@ -12,11 +12,6 @@ Date: Nov. 18, 2021
     <link rel="stylesheet" href="../css/styleday.css" />
     <!--This is for the trash can icon for the food tracker-->
     <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous">
-    <script src="Scripts/jquery-2.0.3.min.js"></script>
-    <script src="Scripts/modernizr-2.6.2.js"></script>
-  <!--
-    referenced from dotnetcurry.com
-  -->
     </script>
   
     <title>fitX</title>
@@ -127,7 +122,6 @@ Date: Nov. 18, 2021
         </div>
     </div>
     </div>
-    
     <div class="left-half">
         <div class="workout">
             <ul> <!--This will link to a new page and can view the specific day and page-->
@@ -139,10 +133,106 @@ Date: Nov. 18, 2021
                 <li><a href="../HTML/saturday.html">Saturday</a></li>
                 <li><a href="../HTML/sunday.html">Sunday</a></li>
             </ul>  
+                <header style="background-color: rgb(209, 151, 151); padding-left: 90pt;">
+                <h1 style="text-align: center;">Workout</h1></header></div>
+                <header style="background-color:#2460A7FF;">
+                <div class="stopwatch">
+                        <h1 style="font-size:30pt; color:lightblue">Start Workout</h1>
+                            <div class="circle">
+                                <span class="time" id="display">00:00:00</span>
+                            </div>
+                    <div class="controls">
+                        <button class="buttonPlay">
+                            <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
+                            <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
+                        </button>
+                        <button class="buttonReset">
+                            <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
+                        </button>
+                    </div>
+                    <div id="myBtnContainer">
+                        <h3>Choose a workout:</h3>
+                        <p style="font-size: smaller;">Select the type of workout:<br></p>
+                            <button class="btn" onclick="loadWorkout('strength')">Strength</button>
+                            <button class="btn active" onclick="loadWorkout('all')">All Workouts</button>
+                            <button class="btn" onclick="loadWorkout('cardio')">Cardio</button>
+                    </div>
+                    <div class="workout-container" style="display: inline-flex;">
+                        <div style="display:inline-block;">
+                        <div class="filterDiv strength" id="workout">
+                            <button class="workout" id="workout1" onclick="workoutDisplay()">
+                                <h5>Workout 1: 
+                                <p>Row: 3x12<br>
+                                Push-Up: 3x15<br>
+                                </p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv strength" id="Workout2">
+                            <button id="workout" onclick="workoutDisplay()">
+                                <h5>Workout 2: 
+                                <p>Curls: 3x12<br>
+                                Shoulder Press: 3x15<br>
+                                </p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv strength" id="Workout3">
+                            <button id="workout">
+                                <h5>Workout 3:
+                                <p>Bicep Curls: 3x12<br>
+                                Shoulder Press: 3x15<br>
+                                Squats: 4x10<br>
+                                Lunges: 3x8<br></p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv cardio" id="Workout4">
+                            <button id="workout">
+                                <h5>Workout 4:
+                                <p>Walk:<br>
+                                3.5 mph pace</p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv cardio" id="Workout5">
+                            <button id="workout">
+                                <h5>Workout 5:
+                                <p>Bike:<br>
+                                30 minutes</p></h5>
+                            </button>
+                        </div>
+                        <div class="filterDiv cardio" id="Workout6">
+                            <button id="workout">
+                                <h5>Workout 6:
+                                <p>Run:<br>
+                                3 miles</p></h5>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                    </header>
+                    <p style="color:#2460A7FF;text-align: center;">Or</p>
+                    <div class="workoutDisplay" style="text-align: center;">
+                        <h4>Write your own workout:</h4>
+                        <form id="userWorkout" style="padding-left: 20px;">
+                                <textarea name="workout" cols="60" rows="5" ></textarea>
+                        </form>
+                    </div>
+
+    </div>
+    
+    <!-- <div class="left-half">
+        <div class="workout">
+            <ul> 
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../HTML/tuesday.html">Tuesday</a></li>
+                <li><a href="../HTML/wednesday.html">Wednesday</a></li>
+                <li><a href="../HTML/thursday.html">Thursday</a></li>
+                <li><a href="../HTML/friday.html">Friday</a></li>
+                <li><a href="../HTML/saturday.html">Saturday</a></li>
+                <li><a href="../HTML/sunday.html">Sunday</a></li>
+            </ul>  
                 <header style="background-color: rgb(209, 151, 151);; padding-left: 90pt;">
                 <h1 style="text-align: center; padding-right: 5pt;">Monday Workout</h1></header></div>
                 <div class="ll-half"><header style="background-color: #85B3D1FF;">
-                    <!--This div is for the left-side of workout display-->
+                  
                     <div id="myBtnContainer" style="display: inline-block;">
                         <h3>Choose a workout:</h3>
                         <p style="font-size: smaller;">Select the type of workout:<br><br></p>
@@ -199,7 +289,7 @@ Date: Nov. 18, 2021
                         </div>
                     </div>
                 </div>
-                <!--This div is for right half of workout display-->
+        
                 <div class="rl-half" style="height:100%">
                     <header style="background-color:#2460A7FF;">
                     <div class="stopwatch">
@@ -222,7 +312,7 @@ Date: Nov. 18, 2021
                   <div class="workout-display" id="workout-display">
                       <h2></h2>
                   </div>  
-                </div>
+                </div> -->
         </div> 
         <footer>
         <h1 style="font-size: smaller;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
