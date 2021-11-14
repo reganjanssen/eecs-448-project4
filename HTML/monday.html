@@ -12,6 +12,11 @@ Date: Nov. 18, 2021
     <link rel="stylesheet" href="../css/styleday.css" />
     <!--This is for the trash can icon for the food tracker-->
     <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous">
+    <script src="Scripts/jquery-2.0.3.min.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+  <!--
+    referenced from dotnetcurry.com
+  -->
     </script>
     <title>fitX</title>
   </head>
@@ -21,12 +26,16 @@ Date: Nov. 18, 2021
             <img src="../images/fitX.png" style="width:100px;height:60px;"/>
         <!-- <h1 style="text-align: right; font-weight: bold;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1> -->
         </div>
-        <div class="date" >
+    <!--
+     <div class="date" >
             <label for="start">Select a day:</label>
             <input type="date" id="displayDate" name="display-date" style="color:#2460A7FF" value=" "min="2021-08-10" max=" ">
             <button type="submit" id="dateBtn" onclick="loadDay()">select</button>
             <p id="selectedDate">Selected Date <span id="date"></span></p>
+            localStorage.setItem('currentDate', "selectedDate");
         </div>
+    </div>
+      -->
     </div>
      <!--
         The container class is split up into two parts: the left and right half. 
@@ -220,5 +229,33 @@ Date: Nov. 18, 2021
     
 <script src="../js/timer.js"></script>
 <script src="../js/app.js"></script>
+      
+ <script>
+
+  //referenced from dotnetcurry.com, function to save the selected input
+  $(function () {
+      $("#Save").click(function () {
+          var dayProfile = {
+              "saveMood": $("Mood").val(),
+              "saveSore": $("Soreness").val(),
+              "saveWater": $("waterTrack").val(),
+              "saveFood": $("myInput").val(),
+              //"saveWorkout": $("selectedWorkout").val(),
+              "saveTimer": $("time").val(),
+          };
+          if (Modernizr.localstorage) {
+            //adapted from stackOverflow.com
+              var  currentDay = new Date();
+              var month = currentDay.getMonth() + 1;
+              var day = currentDay.getDate();
+              var year = currentYear.getDate();
+              document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+              var localsaveDay = window.localStorage;
+              var curDay =JSON.stringify(dayProfile);
+              localSaveDay.setItem("Day", curDay);
+          }
+      });
+  });
+  </script>
 </body>
 </html>
