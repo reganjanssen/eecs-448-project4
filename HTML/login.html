@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>fitX</title>
     <link rel="stylesheet" href="../css/login.css">
-  </head>
-    <body>
-        <div style= "text-align:center" class=Header>
-            <h1 id="top" style="text-align: right;">fitX<sub style="font-size: 9pt;">by RJCAN</sub></h1>
-        </div> 
-       <div class="container">
-           <div class="card">
-               <div class="inner-box" id="card">
-                   <div class="card-front">
+</head>
+
+<body>
+    <div style="text-align:center" class=Header>
+        <h1 id="top" style="text-align: right;">fitX<sub style="font-size: 9pt;">by RJCAN</sub></h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
                     <h2>LOGIN</h2>
                     <form>
                         <input type="username" class="input-box" placeholder="Username" required>
@@ -22,8 +24,8 @@
                     </form>
                     <button type="button" class="btn" onclick="openRegistration()">New User</button>
                     <a href="" onclick="forgotPassword()">Forgot Password</a>
-                   </div>
-                   <div class="card-back">
+                </div>
+                <div class="card-back">
                     <h2>REGISTER</h2>
                     <form>
                         <input type="email" class="input-box" placeholder="Enter your email" required>
@@ -34,41 +36,44 @@
                     </form>
                     <button type="button" class="btn" onclick="openLogin()">I already have an account</button>
                     <a href="">Forgot Password</a>
-                       
-                   </div>
 
-               </div>
-               <button onclick="location.href='index.html'" type="button">Click to go to Home Page</button>
-           </div>
-           
-       </div>
-       
+                </div>
 
-       <script type="text/javascript">
-           var card = document.getElementById("card")
+            </div>
+            <button onclick="location.href='../index.html'" type="button">Click to go to Home Page</button>
+        </div>
 
-            function openRegistration(){
+    </div>
+
+
+    <script language="javascript" type="text/javascript">
+        var card = document.getElementById("card")
+
+        function openRegistration() {
             card.style.transform = "rotateY(-180deg)";
-            }   
-            function openLogin(){
+        }
+        function openLogin() {
             card.style.transform = "rotateY(0deg)";
-            }
+        }
 
-            function checkLogin() {
-                var username = document.querySelector("input").value;
-                var password = document.getElementById("password");
+        function checkLogin() {
+            var username = document.querySelector("input").value;
+            var password = document.getElementById("password");
 
-                if (password.value.length < 8) {
-                    alert("The password must be at least 8 characters long. Please try again.")
-                }
-                else {
-                    alert("Welcome " +username+ "!");
-                    location.href = "../index.html"; // this is not working properly, doesn't redirect
-                }
+            if (password.value.length < 8) {
+                alert("The password must be at least 8 characters long. Please try again.")
             }
-            function forgotPassword() {
-                alert("Check your email for further instructions on how to reset password.") // this is a placeholder for now
+            else {
+                alert("Welcome " + username + "!");
+                location.href = "../index.html";
+
+                window.event.returnValue = false;
             }
-       </script>
-    </body>
+        }
+        function forgotPassword() {
+            alert("Check your email for further instructions on how to reset password.") // this is a placeholder for now
+        }
+    </script>
+</body>
+
 </html>
