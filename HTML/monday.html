@@ -48,7 +48,7 @@ Date: Nov. 18, 2021
             <li><a href="#Water">Water</a></li>
             <li><a href="#Nutrition">Nutrition</a></li>
             </ul>
-           <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px">Wellness</h1><br><br>
+           <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px;">Wellness</h1><br><br>
         </div>
         <!-- This div is for mood tracking-->
        <div class ="upper-half">
@@ -133,11 +133,11 @@ Date: Nov. 18, 2021
                 <li><a href="../HTML/saturday.html">Saturday</a></li>
                 <li><a href="../HTML/sunday.html">Sunday</a></li>
             </ul>  
-                <header style="background-color: rgb(209, 151, 151); padding-left: 90pt;">
+                <header style="background-color: rgb(209, 151, 151);">
                 <h1 style="text-align: center;">Workout</h1></header></div>
                 <header style="background-color:#2460A7FF;">
                 <div class="stopwatch">
-                        <h1 style="font-size:30pt; color:lightblue">Start Workout</h1>
+                    <h1 style="font-size:30pt; color:lightblue; padding-bottom: 12px;">Start Workout</h1>
                             <div class="circle">
                                 <span class="time" id="display">00:00:00</span>
                             </div>
@@ -151,12 +151,12 @@ Date: Nov. 18, 2021
                         </button>
                     </div>
                     <div id="myBtnContainer">
-                        <h3>Choose a workout:</h3>
-                        <p style="font-size: smaller;">Select the type of workout:<br></p>
+                        <h3 style="color:lightblue;">Choose a workout:</h3>
+                        <p style="color:rgb(209, 151, 151)"><i>Select the type of workout:</i></p>
                             <button class="btn" onclick="loadWorkout('strength')">Strength</button>
                             <button class="btn active" onclick="loadWorkout('all')">All Workouts</button>
                             <button class="btn" onclick="loadWorkout('cardio')">Cardio</button>
-                    </div>
+                    </div><br><br>
                     <div class="workout-container" style="display: inline-flex;">
                         <div style="display:inline-block;">
                         <div class="filterDiv strength" id="workout">
@@ -179,8 +179,50 @@ Date: Nov. 18, 2021
                             <button id="workout">
                                 <h5>Workout 3:
                                 <p>Bicep Curls: 3x12<br>
-                                Shoulder Press: 3x15<br>
-                                Squats: 4x10<br>
+                                    Lunges: 3x8<br></p></h5>
+                                </button>
+                            </div>
+                            <div class="filterDiv cardio" id="Workout4">
+                                <button id="workout">
+                                    <h5>Workout 4:
+                                    <p>Walk:<br>
+                                    3.5 mph pace</p></h5>
+                                </button>
+                            </div>
+                            <div class="filterDiv cardio" id="Workout5">
+                                <button id="workout">
+                                    <h5>Workout 5:
+                                    <p>Bike:<br>
+                                    30 minutes</p></h5>
+                                </button>
+                            </div>
+                            <div class="filterDiv cardio" id="Workout6">
+                                <button id="workout">
+                                    <h5>Workout 6:
+                                    <p>Run:<br>
+                                    3 miles</p></h5>
+                                </button>
+                            </div>
+                            <div class="filterDiv strength" id="workout">
+                                <button class="workout" id="workout1" onclick="workoutDisplay()">
+                                    <h5>Workout 1: 
+                                    <p>Row: 3x12<br>
+                                    Push-Up: 3x15<br>
+                                    </p></h5>
+                                </button>
+                            </div>
+                            <div class="filterDiv strength" id="Workout2">
+                                <button id="workout" onclick="workoutDisplay()">
+                                    <h5>Workout 2: 
+                                    <p>Curls: 3x12<br>
+                                    Shoulder Press: 3x15<br>
+                                    </p></h5>
+                                </button>
+                            </div>
+                            <div class="filterDiv strength" id="Workout3">
+                                <button id="workout">
+                                    <h5>Workout 3:
+                                    <p>Bicep Curls: 3x12<br>
                                 Lunges: 3x8<br></p></h5>
                             </button>
                         </div>
@@ -207,13 +249,12 @@ Date: Nov. 18, 2021
                         </div>
                     </div>
                     </div>
-                    </header>
-                    <p style="color:#2460A7FF;text-align: center;">Or</p>
+                    <p style="color:#F0F6F7FF;text-align: center;">Or</p>
                     <div class="workoutDisplay" style="text-align: center;">
                         <h4>Write your own workout:</h4>
                         <form id="userWorkout" style="padding-left: 20px;">
                                 <textarea name="workout" cols="60" rows="5" ></textarea>
-                        </form>
+                        </form></header>
                     </div>
 
     </div>
@@ -315,7 +356,7 @@ Date: Nov. 18, 2021
                 </div> -->
         </div> 
         <footer>
-        <h1 style="font-size: smaller;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
+            <h1 style="font-size: smaller;color:lightblue;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
         </footer>
     </div>
     
