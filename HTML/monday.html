@@ -26,13 +26,12 @@ Date: Nov. 18, 2021
         <div class="save" >
 
 <button onclick="save()">Save Day</button>
-
            <p><script> document.write(new Date().toLocaleDateString());
                localStorage.setItem('currentDate', "date");</script><span id="date"></span> </p>
 
            </div>
     </div>
-
+      -->
     </div>
      <!--
         The container class is split up into two parts: the left and right half. 
@@ -54,7 +53,7 @@ Date: Nov. 18, 2021
        <div class ="upper-half">
             <h2 id="Mood">Mood</h2>
             <form id="moodText" method="get">
-            <textarea name="mood" cols="75" rows="8">Use this space to add any thoughts about your Mood...</textarea>
+            <textarea name="mood" id=mood_text cols="75" rows="8">Use this space to add any thoughts about your Mood...</textarea>
             </form>
             <br><br>
             <div class="slidecontainer">
@@ -78,7 +77,7 @@ Date: Nov. 18, 2021
             <div class="soreRating">
                 <form method="get" id="soreness" action="" style="padding-left:20%">
                 <label for="soreness" style="font-size: 8pt;color:#2460A7FF;">Choose a soreness rating 1-5 (1 being not sore at all) :</label>
-                <select name="soreness" id="soreness" >
+                <select name="soreness" id="selectSoreness" >
                     <option value=" "></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -88,41 +87,45 @@ Date: Nov. 18, 2021
                 </form>
             <br>
             <form id="soreText" action="" method="get">
-            <textarea name="sore" cols="75" rows="8">Use this space to add any extra details on your Soreness...</textarea><br>
-            <!-- <input type="submit" value="submit" style="background-color: lightblue; font-size:8px; width:20%;color:#2460A7FF;"> -->
+            <textarea name="sore" id = "sore_text" cols="75" rows="8"   >Use this space to add any extra details on your Soreness...</textarea><br>
+
             </form>
             <br><br>
         </div>
         </div>
          <!-- This div is for water tracking-->
-        <div class="waterTrack" id="Water">
-                <h2>Water Log</h2>
-            <div class="stats">
-                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Date:<span id=curdate></span></p>
-                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;3L</span></p>
-                <p style="color:rgb(209, 151, 151);font-size: 10pt;">Today's intake:<span id=curIntake></span></p>
+         <div class="waterTrack" id="Water">
+            <h2>Water Log</h2>
+        <div class="stats">
+            <p style="color:rgb(209, 151, 151);font-size: 10pt;">Date:<span id=curdate></span></p>
+            <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;3L</span></p>
+            <p style="color:rgb(209, 151, 151);font-size: 10pt;">Today's intake:<span id=curIntake ></span></p>
+        </div>
+        <div class="water-fill" style="padding-left:26.5%">
+            <div class="water-buttons">
+                <button onclick="fill(.25)" class="waterAmt">250ml</button>
+                <button onclick="fill(.5)" class="waterAmt">500ml</button>
+                <button onclick="fill(.75)" class="waterAmt">750ml</button>
+                <button onclick="fill(1)" class="waterAmt">1L</button>
+                <button onclick="fill(0)" class="reset">Reset</button>
+               
             </div>
-            <div class="water-fill" style="padding-left:26.5%">
-                <div class="water-buttons">
-                    <button onclick="fill(.25)" class="waterAmt">250ml</button>
-                    <button onclick="fill(.5)" class="waterAmt">500ml</button>
-                    <button onclick="fill(.75)" class="waterAmt">750ml</button>
-                    <button onclick="fill(1)" class="waterAmt">1L</button>
-                    <button onclick="fill(0)" class="reset">Reset</button>
-                </div>
-            <br><br>
-            </div>
+ 
+        <br><br>
+    </div>
            
         </div> 
          <!-- This div is for food tracking-->
         <div class="foodTracker" id="Nutrition">
            <header><h2>Nutrition Log</h2>
+            <form>
             <input type="text" id="myInput" placeholder="Add in your food intake..." />
             <span class="addBtn" id="add_button">Add</span>
                 <ul id="myUL">
 
                     </ul></header>
                     <br><br><br><br><br><br><br><br><br><br><br><br>  
+            </form>
         </div>
     </div>
     <div class="left-half">
@@ -273,35 +276,49 @@ Date: Nov. 18, 2021
     
 <script src="../js/timer.js"></script>
 <script src="../js/app.js"></script>
-  
- adapted from  https://www.tiny.cloud/blog/javascript-localstorage/
-  <script>
- function save() {
-        var myContent = document.getElementById("sore_text").value;
-        localStorage.setItem("mondaySoreText", myContent);
+
+//adapted from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+<script>
+      function save() {
+        var soreTextSave = document.getElementById("sore_text").value;
+        localStorage.setItem("mondaySoreText", soreTextSave);
         var soreRatingSave = document.getElementById("selectSoreness").value;
         localStorage.setItem('mondaySoreRating', soreRatingSave);
         var moodTextSave = document.getElementById("mood_text").value;
         localStorage.setItem("mondayMoodText", moodTextSave);
         var moodRatingSave = document.getElementById("myRange").value;
         localStorage.setItem('mondayMoodRating', moodRatingSave);
+        var moodRatingSave = document.getElementById("myRange").value;
+        localStorage.setItem('mondayMoodRating', moodRatingSave);
         var saveWater = curIntake.innerHTML;
         localStorage.setItem('mondayWater', saveWater);
+        var saveFood = document.getElementById("Nutrition").value;
+        localStorage.setItem('mondayFood', saveFood);
+
       }
 
-    
+  
 
-</script>
-   //<script> 
-   // var saveSoreText = document.getElementById(soreText);
+    
+    </script>
+
+//adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
+<script> 
+    //var saveSoreText = document.getElementById(soreText);
     //saveInput(saveSoreText);
     //var saveSoreRating = document.getElementById(mondaySoreRating);
-   // saveInput(saveSorRating);
+    //saveInput(saveSorRating);
     //var saveMoodText = document.getElementById(mondayMoodText);
-   // saveInput(saveMoodText);
-  //  var saveSoreRating = document.getElementById(mondayMoodRating);
-  //  saveInput(saveMoodRating);
-   // </script>
- // </script>
+    //saveInput(saveMoodText);
+    //var saveSoreRating = document.getElementById(mondayMoodRating);
+    //saveInput(saveMoodRating);
+    </script>
+    
+
+<script src="../js/timer.js"></script>
+<script src="../js/app.js"></script>
+<script>
+
+  </script>
 </body>
 </html>
