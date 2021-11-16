@@ -14,6 +14,33 @@ let timeWork;
 let distance;
 let cardioSummary;
 
+//adapted from https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+function currentDate()
+{
+  var currentDay = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  currentDay = mm + '/' + dd + '/' + yyyy;
+  return (currentDay);
+}
+
+//adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
+//saves Input and reloads it when returning to that page
+function saveInput(input)
+{
+  var itemKey = "input-" + input.id;
+
+  var savedValue = localStorage.getItem(itemKey);
+  if (savedValue)
+      input.value = savedValue;
+  input.addEventListener('input', function ()
+  {
+      localStorage.setItem(itemKey, input.value);
+  });
+}
+
 function workoutType(choice) {
     if (choice == 1) {
         document.getElementById("cardio").disabled = true;
