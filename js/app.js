@@ -161,7 +161,7 @@ const curdate = document.querySelector('#curdate') // this can be moved elswhere
 const curIntake = document.querySelector('#curIntake')
         
 curdate.innerHTML = '&nbsp;' + new Date().toDateString()
-curIntake.innerHTML = '&nbsp;' + '0L'
+curIntake.innerHTML = ' ' + '0L'
   // Takes in the amount of water specified and adds it to the total intake
 function fill(qty) {
     if (qty) {
@@ -171,7 +171,7 @@ function fill(qty) {
         totalIntake = 0
       }
 // Displays the current intake
-curIntake.innerHTML = '&nbsp;' + totalIntake + 'L'
+curIntake.innerHTML = ' ' + totalIntake + 'L'
 }
 
 /**************************************************************************************************/
