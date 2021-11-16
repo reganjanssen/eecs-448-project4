@@ -59,8 +59,10 @@ Date: Nov. 18, 2021
             <br><br>
             <div class="slidecontainer">
                 <div class="left-side">
+                    <form>
                     <h4> Mood: <span id="demo"></span></h4>
                     <p style="color:#85B3D1FF;">Use the sliding scale to <br> adjust your moood rating.</p>
+                    </form>
                 </div>
                 <div class="right-side">
                     <img src="../images/moodscale.jpg" alt="Mood Scale" /><br><br>
@@ -96,6 +98,7 @@ Date: Nov. 18, 2021
         <div class="waterTrack" id="Water">
                 <h2>Water Log</h2>
             <div class="stats">
+                <form>
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Date:<span id=curdate></span></p>
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Daily Target:<span>&nbsp;3L</span></p>
                 <p style="color:rgb(209, 151, 151);font-size: 10pt;">Today's intake:<span id=curIntake></span></p>
@@ -109,18 +112,21 @@ Date: Nov. 18, 2021
                     <button onclick="fill(0)" class="reset">Reset</button>
                 </div>
             <br><br>
-        </div>  
+            </div>
+            </form> 
+        </div> 
          <!-- This div is for food tracking-->
         <div class="foodTracker" id="Nutrition">
            <header><h2>Nutrition Log</h2>
+            <form>
             <input type="text" id="myInput" placeholder="Add in your food intake..." />
             <span class="addBtn" id="add_button">Add</span>
                 <ul id="myUL">
 
                     </ul></header>
                     <br><br><br><br><br><br><br><br><br><br><br><br>  
+            </form>
         </div>
-    </div>
     </div>
     <div class="left-half">
         <div class="workout">
@@ -158,6 +164,7 @@ Date: Nov. 18, 2021
                             <button class="btn" onclick="loadWorkout('cardio')">Cardio</button>
                     </div><br><br>
                     <div class="workout-container" style="display: inline-flex;">
+                        <form>
                         <div style="display:inline-block;">
                         <div class="filterDiv strength" id="workout">
                             <button class="workout" id="workout1" onclick="workoutDisplay()">
@@ -248,7 +255,8 @@ Date: Nov. 18, 2021
                                 2 min jog/walk</p></h5>
                             </button>
                         </div>
-                    </div>
+                        </div>
+                        </form>
                     </div>
                     <p style="color:#F0F6F7FF;text-align: center;">Or</p>
                     <div class="workoutDisplay" style="text-align: center;">
