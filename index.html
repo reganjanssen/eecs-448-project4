@@ -37,7 +37,9 @@ Date: Nov. 18, 2021
                     <li><a href="HTML/login.html"><b>User Login</b></a></li>
                 </ul>
                 <p><b>Hi welcome to fitX!</b><br> This is the app where you can accomplish all your physical and mental goals. <br>Use this app to create to-do lists, set reminders, set workouts, and track your progress.</p>
-                <br><h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
+                <br>
+                <button onclick="reset()">Reset Week</button>
+                <h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
                 <form id="weeklySummary">
                     <table id="weeklySummary" style="text-align: left; display:left;">
                         <tr>
@@ -1141,5 +1143,9 @@ Date: Nov. 18, 2021
                     <header style="background-color:rgb(209, 151, 151);">
                     <h2 style="color:#2460A7ff"><i>fitX<sub style="font-size: 9pt;">by RJCAN</sub></i></h2></header>
                 </footer>          
-    
+    <script>
+      function reset()
+      {
+        localStorage.clear();
+      }
 </html>
