@@ -22,16 +22,10 @@ Date: Nov. 18, 2021
             <img src="../images/fitX.png" style="width:100px;height:60px;"/>
         <!-- <h1 style="text-align: right; font-weight: bold;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1> -->
         </div>
+        <p id="dateDisplay"><script> document.write(new Date().toLocaleDateString());
+            localStorage.setItem('currentDate', "date");</script><span id="date"></span> </p>
+        </div>
 
-        <div class="save" >
-
-<button onclick="save()">Save Day</button>
-           <p><script> document.write(new Date().toLocaleDateString());
-               localStorage.setItem('currentDate', "date");</script><span id="date"></span> </p>
-
-           </div>
-    </div>
-      -->
     </div>
      <!--
         The container class is split up into two parts: the left and right half. 
@@ -47,7 +41,7 @@ Date: Nov. 18, 2021
             <li><a href="#Water">Water</a></li>
             <li><a href="#Nutrition">Nutrition</a></li>
             </ul>
-           <h1 style="font-family: 'Courier New', Courier, monospace;background-color: rgb(209, 151, 151); padding: 20px 30px;">Wellness</h1><br><br>
+           <h1 style="background-color: rgb(209, 151, 151); padding: 20px 30px;">Monday Wellness</h1><br><br>
         </div>
         <!-- This div is for mood tracking-->
        <div class ="upper-half">
@@ -87,7 +81,7 @@ Date: Nov. 18, 2021
                 </form>
             <br>
             <form id="soreText" action="" method="get">
-            <textarea name="sore" id = "sore_text" cols="75" rows="8"   >Use this space to add any extra details on your Soreness...</textarea><br>
+            <textarea name="sore" id = "sore_text" cols="75" rows="8">Use this space to add any extra details on your Soreness...</textarea><br>
 
             </form>
             <br><br>
@@ -140,7 +134,7 @@ Date: Nov. 18, 2021
                 <li><a href="../HTML/sunday.html">Sunday</a></li>
             </ul>  
                 <header style="background-color: rgb(209, 151, 151);">
-                <h1 style="text-align: center;">Workout</h1></header></div>
+                <h1 style="text-align: center;">Monday Workout</h1></header></div>
                 <header style="background-color:#2460A7FF;">
                 <div class="stopwatch">
                     <h1 style="font-size:30pt; color:lightblue; padding-bottom: 12px;">Start Workout</h1>
@@ -271,6 +265,10 @@ Date: Nov. 18, 2021
         </div> 
         <footer>
             <h1 style="font-size: smaller;color:lightblue;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
+            <div class="save" >
+                <button id="saveButton" onclick="save()">Save Day</button>
+               
+            </div>
         </footer>
     </div>
     
@@ -299,10 +297,10 @@ Date: Nov. 18, 2021
 
   
 
-    
+    //adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
     </script>
 
-//adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
+
 <script> 
     //var saveSoreText = document.getElementById(soreText);
     //saveInput(saveSoreText);

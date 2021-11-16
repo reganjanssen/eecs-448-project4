@@ -17,6 +17,26 @@ body {
   background-color: rgb(209, 151, 151);
   text-align: left;
   }
+  .save {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  #dateDisplay {
+    text-align: center;
+    padding-left: 150px;
+    font-size: 20px;
+    color:#F0F6F7FF;
+  }
+  #saveButton {
+    color:#2460A7FF;
+    border-radius: 5px;
+    background-color: lightblue;
+    display: inline-block;
+    padding: 5px;
+}
+#saveButton:hover {
+  background-color: rgb(209, 151, 151);
+}
 #selectedDate {
   color: #F0F6F7FF;
   font-size: 16px;
@@ -28,7 +48,6 @@ body {
   border-color: #F0F6F7FF;
   color:#F0F6F7FF;
 }
-
 ul {
   list-style-type: none;
   position: -webkit-sticky; /* for safari */
@@ -40,14 +59,12 @@ ul {
   overflow: hidden;
   background-color: lightblue;
 }
-
 .right-half li {
   float: left;
 } 
 .left-half li {
   float: left;
 }
-
 li a {
   display: block;
   color: #2460A7FF;
@@ -79,7 +96,6 @@ li a:hover {
   overflow: hidden;
   justify-content: center;
 }
-
 .filterDiv {
   float: center;
   color: #ffffff;
@@ -92,7 +108,6 @@ li a:hover {
 .show {
   display: inline-block;
 }
-
 .btn {
   border: none;
   outline: none;
@@ -102,16 +117,13 @@ li a:hover {
   color:#2460A7FF;
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-
 .btn:hover {
   background-color: rgb(209, 151, 151); 
 }
-
 .btn.active {
   background-color: lightblue;
   color: #F0F6F7FF;
 }
-
 h3 {
   text-align: center;
   color:  #2460A7FF; 
@@ -128,13 +140,11 @@ h5{
   color: #F0F6F7FF;
   font-size: 10pt;
 }
-
 h4 {
   color: rgb(209, 151, 151);
   padding-left: 25pt;
   font-family: 'Courier New', Courier, monospace;
 }
-
 .stopwatch {
   display: grid;
   justify-items: center;
@@ -143,7 +153,6 @@ h4 {
   padding-top: 25px;
   text-align: center;
 }
-
 .circle {
   display: flex;
   justify-content: center;
@@ -155,20 +164,17 @@ h4 {
   border-radius: 50%;
   margin-bottom: 12px;
 }
-
 .time {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
   font-size: 25px;
   color: lightblue;
 }
-
 .controls {
   display: flex;
   justify-content: space-between;
   width: 150px;
 }
-
 button {
   cursor: pointer;
   background: transparent;
@@ -177,19 +183,15 @@ button {
   margin: 0;
   outline: none;
 }
-
 #playButton {
   display: block;
 }
-
 #pauseButton {
   display: none;
 }
-
 .container {
   width: device-width;
 }
-
 .right-half {
   position: absolute;
   right: 0px;
@@ -197,38 +199,32 @@ button {
   height: 100%;
   background: #F0F6F7FF;
 }
-
 .left-side {
   position: absolute;
   left: 0px;
   width: 50%;
   padding-left:75pt;
 }
-
 .right-side {
   position: absolute;
   right: 0px;
   width: 50%;
   padding-right:50pt;
 }
-
 .lower-half {
   /* bottom: 0; */
   font-family: 'Courier New', Courier, monospace;
 }
-
 .upper-half {
   top: 0;
   font-family: 'Courier New', Courier, monospace;
 }
- 
 header {
   background: #F0F6F7FF;
   padding: 20px 30px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
- 
 img {
   margin-left: auto;
   margin-right: auto;
@@ -236,12 +232,10 @@ img {
   height: 50%;
   display:block;
 }
-
 .slidecontainer {
   width: 45%;
   padding-left: 10pt;
 }
-
 .slider {
   -webkit-appearance: none;
   width: 98%;
@@ -252,11 +246,9 @@ img {
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
-
 .slider:hover {
   opacity: 1;
 }
-
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -265,14 +257,12 @@ img {
   background: #086fc4;
   cursor: pointer;
 }
-
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
   background: #086fc4;
   cursor: pointer;
 }
-
 h1 {
   font-size: 48px;
   font-family: 'Courier New', Courier, monospace;
@@ -283,7 +273,6 @@ h1 {
   padding: 0 64px;
   margin: 0;
 }
-
 h2 {
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
@@ -294,20 +283,16 @@ h2 {
   padding: 0 64px;
   margin: 0;
 }
-
 #moodText {
   text-align: center;
   width:auto;
   height: fit-content;
 }
-
 #soreText {
   text-align: center;
   width:auto;
   height: fit-content;
 }
-
-/** This will be helpful when adding in water **/
 .reset {
   min-width: 50px;
   display: block;
@@ -315,9 +300,7 @@ h2 {
   font-size: 15px;
   cursor: pointer;
   color:#85B3D1FF;
-  /* float:left; */
  }
-
 .waterAmt {
   min-width: 50px;
   display: block;
@@ -329,15 +312,12 @@ h2 {
   justify-content: center;
   color:#086fc4;
 }
-
 .waterAmt:hover {
   background-color: lightblue; 
 }
-
 .reset:hover {
   background-color: lightblue;
 }
-
 .stats {
   margin: auto;
   text-align: center;
@@ -346,7 +326,6 @@ h2 {
   margin: 10px auto;
   font-size: 20px;
 }
-
 #myInput {
   width: 75%;
   margin-left: 0;
@@ -355,7 +334,6 @@ h2 {
   font-size: 14px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .addBtn {
   width: 25%;
   padding: 10px;
@@ -369,13 +347,10 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
 }
-
 .addBtn:hover {
   background-color: lightblue;
   color: #F0F6F7FF;
 }
-
-/* Style the list items */
 .foodTracker ul li {
   cursor: pointer;
   position: relative;
@@ -388,12 +363,6 @@ h2 {
   float:none;
   width: 80%;
   color:#2460A7FF;;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 .foodTracker ul{
   text-align: left;
@@ -402,26 +371,18 @@ h2 {
   overflow: hidden;
   background-color: transparent;
 }
-
-/* Set all odd list items to a different color (zebra-stripes) */
 .foodTracker ul li:nth-child(odd) {
   background: lightblue;
 }
-
-/* Darker background-color on hover */
 .foodTracker ul li:hover {
   background: skyblue;
 }
-
-
-
 /* trash button */
 .far {
   position: absolute;
   right: 0;
   padding: 10px 16px 12px 16px;
 }
-
 .far:hover {
   color: white;
 }
@@ -438,7 +399,6 @@ footer h1 {
   margin: 0;
   text-decoration: none;
 }
-
  
 
 
