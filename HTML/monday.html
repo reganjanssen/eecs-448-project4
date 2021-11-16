@@ -276,33 +276,16 @@ Date: Nov. 18, 2021
     
 <script src="../js/timer.js"></script>
 <script src="../js/app.js"></script>
-      
- <script>
-
-  //referenced from dotnetcurry.com, function to save the selected input
-  $(function () {
-      $("#Save").click(function () {
-          var dayProfile = {
-              "saveMood": $("Mood").val(),
-              "saveSore": $("Soreness").val(),
-              "saveWater": $("waterTrack").val(),
-              "saveFood": $("myInput").val(),
-              //"saveWorkout": $("selectedWorkout").val(),
-              "saveTimer": $("time").val(),
-          };
-          if (Modernizr.localstorage) {
-            //adapted from stackOverflow.com
-              var  currentDay = new Date();
-              var month = currentDay.getMonth() + 1;
-              var day = currentDay.getDate();
-              var year = currentYear.getDate();
-              document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-              var localsaveDay = window.localStorage;
-              var curDay =JSON.stringify(dayProfile);
-              localSaveDay.setItem("Day", curDay);
-          }
-      });
-  });
+   <script> 
+    var saveSoreText = document.getElementById(soreText);
+    saveInput(saveSoreText);
+    var saveSoreRating = document.getElementById(mondaySoreRating);
+    saveInput(saveSorRating);
+    var saveMoodText = document.getElementById(mondayMoodText);
+    saveInput(saveMoodText);
+    var saveSoreRating = document.getElementById(mondayMoodRating);
+    saveInput(saveMoodRating);
+    </script>
   </script>
 </body>
 </html>
