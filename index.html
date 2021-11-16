@@ -11,6 +11,12 @@ Date: Nov. 18, 2021
     <title>fitX</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" charset="utf-8"></script>
+    <script>
+        function save() {
+            var selectActivity = document.getElementById('select-activity').value;
+            localStorage.setItem("selectedActivities", selectedActivity);
+        }
+    </script>
   </head>
     <body>
         <div class="header">
@@ -1128,7 +1134,9 @@ Date: Nov. 18, 2021
                                 <option value="Friends">Friends</option></select></td>
                         </tr>
                     </table></p></div>
-                <p style="text-align: center;"><a href="#top">Top</a></p>  </body>    
+                    <button onclick="save()">Save Content</button>
+                <p style="text-align: center;"><a href="#top">Top</a></p>
+              </body>    
                 <footer>
                     <header style="background-color:rgb(209, 151, 151);">
                     <h2 style="color:#2460A7ff"><i>fitX<sub style="font-size: 9pt;">by RJCAN</sub></i></h2></header>
