@@ -25,7 +25,7 @@ Date: Nov. 18, 2021
 
         <div class="save" >
 
-<input id="Save" type="submit" value="Save Day" style="color:#2460A7FF" value=" "min="2021-08-10" max=" " onclick="saveInput()"/>
+<button onclick="save()">Save Day</button>
 
            <p><script> document.write(new Date().toLocaleDateString());
                localStorage.setItem('currentDate', "date");</script><span id="date"></span> </p>
@@ -276,8 +276,13 @@ Date: Nov. 18, 2021
     
 <script src="../js/timer.js"></script>
 <script src="../js/app.js"></script>
+  
+ adapted from  https://www.tiny.cloud/blog/javascript-localstorage/
   <script>
-localStorage.setItem('mondaySoreText', 'soreText');
+ function save() {
+        var myContent = document.getElementById("sore_text").value;
+        localStorage.setItem("mondaySoreText", myContent);
+      }
 localStorage.setItem('mondaySoreRating', 'soreness');
 localStorage.setItem('mondayMoodText', 'soreText');
 localStorage.setItem('mondayMondayRating', 'soreness');
