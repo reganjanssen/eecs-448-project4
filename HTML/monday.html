@@ -290,8 +290,10 @@ Date: Nov. 18, 2021
         localStorage.setItem('mondayMoodRating', moodRatingSave);
         var saveWater = curIntake.innerHTML;
         localStorage.setItem('mondayWater', saveWater);
-        var saveFood = document.getElementById("Nutrition").value;
-        localStorage.setItem('mondayFood', saveFood);
+        var saveFood = foodListElement.innerHTML;
+        localStorage.setItem('MondayFood', saveFood);
+        var inputWorkout = document.getElementById("Workout").value;
+        localStorage.setItem("mondayUserWkt", inputWorkout);
 
       }
 
