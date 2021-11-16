@@ -283,23 +283,27 @@ Date: Nov. 18, 2021
  function save() {
         var myContent = document.getElementById("sore_text").value;
         localStorage.setItem("mondaySoreText", myContent);
+        var soreRatingSave = document.getElementById("selectSoreness").value;
+        localStorage.setItem('mondaySoreRating', soreRatingSave);
+        var moodTextSave = document.getElementById("mood_text").value;
+        localStorage.setItem("mondayMoodText", moodTextSave);
+        var moodRatingSave = document.getElementById("myRange").value;
+        localStorage.setItem('mondayMoodRating', moodRatingSave);
       }
-localStorage.setItem('mondaySoreRating', 'soreness');
-localStorage.setItem('mondayMoodText', 'soreText');
-localStorage.setItem('mondayMondayRating', 'soreness');
-localStorage.setItem('mondayWaterLog', 'soreness');
+
+    
 
 </script>
-   <script> 
-    var saveSoreText = document.getElementById(soreText);
-    saveInput(saveSoreText);
-    var saveSoreRating = document.getElementById(mondaySoreRating);
-    saveInput(saveSorRating);
-    var saveMoodText = document.getElementById(mondayMoodText);
-    saveInput(saveMoodText);
-    var saveSoreRating = document.getElementById(mondayMoodRating);
-    saveInput(saveMoodRating);
-    </script>
-  </script>
+   //<script> 
+   // var saveSoreText = document.getElementById(soreText);
+    //saveInput(saveSoreText);
+    //var saveSoreRating = document.getElementById(mondaySoreRating);
+   // saveInput(saveSorRating);
+    //var saveMoodText = document.getElementById(mondayMoodText);
+   // saveInput(saveMoodText);
+  //  var saveSoreRating = document.getElementById(mondayMoodRating);
+  //  saveInput(saveMoodRating);
+   // </script>
+ // </script>
 </body>
 </html>
