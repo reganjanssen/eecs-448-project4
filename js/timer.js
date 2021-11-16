@@ -81,7 +81,7 @@ function end() {
   playButton.addEventListener("click", start);
   pauseButton.addEventListener("click", pause);
   resetButton.addEventListener("click", reset);
-  endButton.addEventListener("click", end);
+  // endButton.addEventListener("click", end);
 
 //get the workout time.
 function timeLog()
