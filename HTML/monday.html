@@ -178,22 +178,22 @@ Date: Nov. 18, 2021
                         <div class="filterDiv strength" id="Workout3">
                             <button id="workout">
                                 <h5>Workout 3:
-                                <p>Bicep Curls: 3x12<br>
-                                    Lunges: 3x8<br></p></h5>
+                                <p>Squats: 3x20<br>
+                                    Lunges: 4x12<br></p></h5>
                                 </button>
                             </div>
                             <div class="filterDiv cardio" id="Workout4">
                                 <button id="workout">
                                     <h5>Workout 4:
                                     <p>Walk:<br>
-                                    3.5 mph pace</p></h5>
+                                    30-45 min</p></h5>
                                 </button>
                             </div>
                             <div class="filterDiv cardio" id="Workout5">
                                 <button id="workout">
                                     <h5>Workout 5:
                                     <p>Bike:<br>
-                                    30 minutes</p></h5>
+                                    30 min</p></h5>
                                 </button>
                             </div>
                             <div class="filterDiv cardio" id="Workout6">
@@ -204,47 +204,48 @@ Date: Nov. 18, 2021
                                 </button>
                             </div>
                             <div class="filterDiv strength" id="workout">
-                                <button class="workout" id="workout1" onclick="workoutDisplay()">
-                                    <h5>Workout 1: 
-                                    <p>Row: 3x12<br>
-                                    Push-Up: 3x15<br>
+                                <button class="workout" id="workout7" onclick="workoutDisplay()">
+                                    <h5>Workout 7: 
+                                    <p>Split Squat: 4x10<br>
+                                    Side Lunge: 4x10<br>
                                     </p></h5>
                                 </button>
                             </div>
-                            <div class="filterDiv strength" id="Workout2">
+                            <div class="filterDiv strength" id="Workout8">
                                 <button id="workout" onclick="workoutDisplay()">
-                                    <h5>Workout 2: 
-                                    <p>Curls: 3x12<br>
-                                    Shoulder Press: 3x15<br>
+                                    <h5>Workout 8: 
+                                    <p>Chest Press: 3x10<br>
+                                    Sumo Squat: 3x12<br>
                                     </p></h5>
                                 </button>
                             </div>
-                            <div class="filterDiv strength" id="Workout3">
+                            <div class="filterDiv cardio" id="Workout9">
                                 <button id="workout">
-                                    <h5>Workout 3:
-                                    <p>Bicep Curls: 3x12<br>
-                                Lunges: 3x8<br></p></h5>
+                                    <h5>Workout 9:
+                                    <p>Jumping Jacks: 4x50<br>
+                                Burpees: 4x8<br></p></h5>
                             </button>
                         </div>
-                        <div class="filterDiv cardio" id="Workout4">
+                        <div class="filterDiv cardio" id="Workout10">
                             <button id="workout">
-                                <h5>Workout 4:
-                                <p>Walk:<br>
-                                3.5 mph pace</p></h5>
+                                <h5>Workout 10:
+                                <p>6x: 1 min Burpees,<br>
+                                1 min high knees</p></h5>
                             </button>
                         </div>
-                        <div class="filterDiv cardio" id="Workout5">
+                        <div class="filterDiv strength" id="Workout11">
                             <button id="workout">
-                                <h5>Workout 5:
-                                <p>Bike:<br>
-                                30 minutes</p></h5>
+                                <h5>Workout 11:
+                                <p>Sit-ups: 3x15<br>
+                                Plank: 1 min</p></h5>
                             </button>
                         </div>
-                        <div class="filterDiv cardio" id="Workout6">
+                        <div class="filterDiv cardio" id="Workout12">
                             <button id="workout">
-                                <h5>Workout 6:
-                                <p>Run:<br>
-                                3 miles</p></h5>
+                                <h5>Workout 12:
+                                <p>Intervals:<br>
+                                5x: 3 min run,<br>
+                                2 min jog/walk</p></h5>
                             </button>
                         </div>
                     </div>
@@ -255,105 +256,10 @@ Date: Nov. 18, 2021
                         <form id="userWorkout" style="padding-left: 20px;">
                                 <textarea name="workout" cols="65" rows="5" >Use this space to write your own workout or as a space to write additional notes...</textarea>
                         </form></header>
-                    </div>
-
-    </div>
+         
+            </div>
+        </div>          
     
-    <!-- <div class="left-half">
-        <div class="workout">
-            <ul> 
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../HTML/tuesday.html">Tuesday</a></li>
-                <li><a href="../HTML/wednesday.html">Wednesday</a></li>
-                <li><a href="../HTML/thursday.html">Thursday</a></li>
-                <li><a href="../HTML/friday.html">Friday</a></li>
-                <li><a href="../HTML/saturday.html">Saturday</a></li>
-                <li><a href="../HTML/sunday.html">Sunday</a></li>
-            </ul>  
-                <header style="background-color: rgb(209, 151, 151);; padding-left: 90pt;">
-                <h1 style="text-align: center; padding-right: 5pt;">Monday Workout</h1></header></div>
-                <div class="ll-half"><header style="background-color: #85B3D1FF;">
-                  
-                    <div id="myBtnContainer" style="display: inline-block;">
-                        <h3>Choose a workout:</h3>
-                        <p style="font-size: smaller;">Select the type of workout:<br><br></p>
-                            <button class="btn active" onclick="loadWorkout('all')">All Workouts</button><br><br>
-                            <button class="btn" onclick="loadWorkout('strength')">Strength</button><br><br>
-                            <button class="btn" onclick="loadWorkout('cardio')">Cardio</button>
-                    </div>
-                    <div class="workout-container">
-                        <div class="filterDiv strength" id="Workout1">
-                            <button>
-                                <h5>Workout 1: 
-                                <p>Row: 3x12<br>
-                                Push-Up: 3x15<br>
-                                </p></h5>
-                            </button>
-                        </div>
-                        <div class="filterDiv strength" id="Workout2">
-                            <button>
-                                <h5>Workout 2: 
-                                <p>Curls: 3x12<br>
-                                Shoulder Press: 3x15<br>
-                                </p></h5>
-                            </button>
-                        </div>
-                        <div class="filterDiv strength" id="Workout3">
-                            <button>
-                                <h5>Workout 3:
-                                <p>Bicep Curls: 3x12<br>
-                                Shoulder Press: 3x15<br>
-                                Squats: 4x10<br>
-                                Lunges: 3x8<br></p></h5>
-                            </button>
-                        </div>
-                        <div class="filterDiv cardio" id="Workout4">
-                            <button>
-                                <h5>Workout 4:
-                                <p>Walk:<br>
-                                3.5 mph pace</p></h5>
-                            </button>
-                        </div>
-                        <div class="filterDiv cardio" id="Workout5">
-                            <button>
-                                <h5>Workout 5:
-                                <p>Bike:<br>
-                                30 minutes</p></h5>
-                            </button>
-                        </div>
-                        <div class="filterDiv cardio" id="Workout6">
-                            <button>
-                                <h5>Workout 6:
-                                <p>Run:<br>
-                                3 miles</p></h5>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="rl-half" style="height:100%">
-                    <header style="background-color:#2460A7FF;">
-                    <div class="stopwatch">
-                        <h1 style="font-size:30pt; color:lightblue">Start Workout</h1>
-                            <div class="circle">
-                                <span class="time" id="display">00:00:00</span>
-                            </div>
-                    <div class="controls">
-                        <button class="buttonPlay">
-                            <img id="playButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/play-button_opkxmt.svg" />
-                            <img id="pauseButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/pause-button_pinhpy.svg" />
-                        </button>
-                        <button class="buttonReset">
-                            <img id="resetButton" src="https://res.cloudinary.com/https-tinloof-com/image/upload/v1593360448/blog/time-in-js/reset-button_mdv6wf.svg" />
-                        </button>
-                    </div>
-                    </div>
-                    </header><br><br><br>
-
-                  <div class="workout-display" id="workout-display">
-                      <h2></h2>
-                  </div>  
-                </div> -->
         </div> 
         <footer>
             <h1 style="font-size: smaller;color:lightblue;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
