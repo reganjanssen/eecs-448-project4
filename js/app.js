@@ -28,72 +28,16 @@ function currentDate()
   currentDay = mm + '/' + dd + '/' + yyyy;
   return (currentDay);
 }
-/**************************************************************************************************/
-/**The following block of code pertains to Saving the input and reloading when returning to that page
- * Adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
- */
-function saveInput(input)
-{
-  var itemKey = "input-" + input.id;
 
-  var savedValue = localStorage.getItem(itemKey);
-  if (savedValue)
-      input.value = savedValue;
-  input.addEventListener('input', function ()
-  {
-      localStorage.setItem(itemKey, input.value);
-  });
-}
-// Commented out for now, idk if this is being used?
-// function workoutType(choice) {
-//     if (choice == 1) {
-//         document.getElementById("cardio").disabled = true;
-//         document.getElementById("strength").disabled = false;
-//         cardioWork = window.prompt("Enter name of workout");
-//         timeWork = window.prompt("Enter time for timer");
-//         distance = window.prompt("Enter distance");
-//         cardioSummary = "cardioWork: " + cardioWork + " timeWork :" + timeWork + " distance : " + distance;
-//         // I don't know why we need to input that. And how we use for that. we can just set up the name and time and the distance for the selectWorkout;
-//         if (document.getElementById("cardio").disabled == true) {
-//             alert(cardioSummary);
-//             window.location.href = "../HTML/timer.html";
-//         }
 
-//     }
-//     if (choice == 2) {
-//         document.getElementById("strength").disabled = true;
-//         document.getElementById("cardio").disabled = false;
-//         strengthWork = window.prompt("Enter name of workout");
-//         reps = window.prompt("Enter time for timer");
-//         weight = window.prompt("Enter distance");
-//         strengthSummary = "strengthWork: " + strengthWork + " reps :" + reps + " weight : " + weight;
-//         if (document.getElementById("strength").disabled == true)
-//         {
-//             alert(strengthSummary);
-//             window.location.href = "../HTML/timer.html";
-//         }
-//     }
-// }
 
-function weeklySummary()
-{
-    cardioSummary = "cardioWork: " + cardioWork + " timeWork :" + timeWork + " distance : " + distance + "\n";
-    strengthSummary = "strengthWork: " + strengthWork + " reps :" + reps + " weight : " + weight + "\n";
-    var textarea = document.getElementById("weeklySummary");
-    textarea.innerHTML = "Cardio summary: " + cardioSummary + "Strength summary: " + strengthSummary;
-}
-
-// On load alerts for the day.html files when it is first loaded
+ /**************************************************************************************************/
+ /** The following block of code pertains to the pop up alert for tracking mood and soreness
+  * On load alerts for the day.html files when it is first loaded
+  */
 function trackerAlert(){
     alert("Don't forget to log your wellness!")
   }
-
-  // Date selector for day.html files, will dislay the data from the specified day, commented out for now dont believe needed
-  // var dateControl = document.querySelector('input[type="date"]');
-  
-  // function loadDay() {
-  //   document.getElementById('selectedDate').innerHTML = dateControl.value;
-  // }
   
   /**************************************************************************************************/
   /**
