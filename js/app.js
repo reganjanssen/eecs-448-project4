@@ -100,12 +100,15 @@ function trackerAlert(){
    * The following block of code pertains to the mood slider
    * Adapted from W3 schools
    */
+if(document.getElementById("myRange"))
+  {
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
   output.innerHTML = slider.value;
   
   slider.oninput = function() {
     output.innerHTML = this.value;
+  }
   }
   /**************************************************************************************************/
 
@@ -165,7 +168,7 @@ function trackerAlert(){
 let totalIntake = 0
 const curdate = document.querySelector('#curdate') // this can be moved elswhere to display date
 const curIntake = document.querySelector('#curIntake')
-        
+ if(curdate = document.querySelector('#curdate') ){       
 curdate.innerHTML = ' ' + new Date().toDateString()
 curIntake.innerHTML = ' ' + '0L'
   // Takes in the amount of water specified and adds it to the total intake
@@ -179,7 +182,7 @@ function fill(qty) {
 // Displays the current intake
 curIntake.innerHTML = ' ' + totalIntake + 'L'
 }
-
+ }
 /**************************************************************************************************/
 /** 
  * The following block of code pertains to the food tracker.
@@ -187,6 +190,7 @@ curIntake.innerHTML = ' ' + totalIntake + 'L'
  **/
 
 const foodList = [];
+if(foodListElement = document.querySelector("#myUL")){
 const foodListElement = document.querySelector("#myUL");
 
 // add food to the list by hitting enter or using the add button
@@ -218,6 +222,7 @@ function deleteItem(x) {
     1
   );
   displayFood();
+}
 }
 // function to display the food items in a list. Takes in the user input, returns a list of items
 function displayFood() {
