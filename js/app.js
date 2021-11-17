@@ -14,8 +14,10 @@ let timeWork;
 let distance;
 let cardioSummary;
 
-//adapted from https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
-// Function to display the date at the top of the day.html pages
+ /**************************************************************************************************/
+ /** The following block of code pertains to the date display at the top of the day.html pages
+  * Adapted from https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+  */
 function currentDate()
 {
   var currentDay = new Date();
@@ -26,9 +28,10 @@ function currentDate()
   currentDay = mm + '/' + dd + '/' + yyyy;
   return (currentDay);
 }
-
-//adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
-//saves Input and reloads it when returning to that page
+/**************************************************************************************************/
+/**The following block of code pertains to Saving the input and reloading when returning to that page
+ * Adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
+ */
 function saveInput(input)
 {
   var itemKey = "input-" + input.id;
@@ -94,7 +97,8 @@ function trackerAlert(){
   
   /**************************************************************************************************/
   /**
-   * The following block of code pertains to the mood slider, adapted from W3 schools
+   * The following block of code pertains to the mood slider
+   * Adapted from W3 schools
    */
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
@@ -106,7 +110,8 @@ function trackerAlert(){
   /**************************************************************************************************/
 
   /**
-   * The following block of code pertains to the filtering of workouts on the left half of workout div, adapted from W3 schools
+   * The following block of code pertains to the filtering of workouts on the left half of workout div 
+   * Adapted from W3 schools
    */
   loadWorkout("all")
   // Function to display the select workout type
@@ -161,7 +166,7 @@ let totalIntake = 0
 const curdate = document.querySelector('#curdate') // this can be moved elswhere to display date
 const curIntake = document.querySelector('#curIntake')
         
-curdate.innerHTML = '&nbsp;' + new Date().toDateString()
+curdate.innerHTML = ' ' + new Date().toDateString()
 curIntake.innerHTML = ' ' + '0L'
   // Takes in the amount of water specified and adds it to the total intake
 function fill(qty) {
@@ -178,6 +183,7 @@ curIntake.innerHTML = ' ' + totalIntake + 'L'
 /**************************************************************************************************/
 /** 
  * The following block of code pertains to the food tracker.
+ * Adapted from https://semihdurmus.github.io/SD_03_Todo_List/
  **/
 
 const foodList = [];
