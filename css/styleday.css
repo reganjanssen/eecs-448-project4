@@ -78,11 +78,9 @@ li a:hover {
   background-color: #85B3D1FF;
 }
 .left-half {
-  position: absolute;
-  left: 5px;
-  width: 50%;
-  height: 100%;
-  background: #F0F6F7FF;
+  /* position: absolute; */
+  padding-right:450px;
+  margin:auto;
 }
 .ll-half {
   position: absolute;
