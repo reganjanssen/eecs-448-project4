@@ -297,15 +297,16 @@ Date: Nov. 18, 2021
 
     //adapted from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
     <script>
-        function save() {
+      
+   function save() {
             var soreTextSave = document.getElementById("sore_text");
-            localStorage.setItem("sore_text", soreTextSave.value);
+            localStorage.setItem('Mondaysore_text', soreTextSave.value);
 
             var soreRatingSave = document.getElementById("selectSoreness").value;
             localStorage.setItem('mondaySoreRating', soreRatingSave);
 
             var moodTextSave = document.getElementById("mood_text").value;
-            localStorage.setItem("mondayMoodText", moodTextSave);
+            localStorage.setItem('mondayMoodText', moodTextSave);
 
             var moodRatingSave = document.getElementById("myRange").value;
             localStorage.setItem('mondayMoodRating', moodRatingSave);
@@ -318,14 +319,11 @@ Date: Nov. 18, 2021
             var saveFood = foodListElement.innerHTML;
             localStorage.setItem('MondayFood', saveFood);
             var inputWorkout = document.getElementById("Workout").value;
-            localStorage.setItem("mondayUserWkt", inputWorkout);
-            var soreTextSave = "Test 123";
-            localStorage.setItem("mondaySoreText", soreTextSave);
+            localStorage.setItem('mondayUserWkt', inputWorkout);
             var saveWorkout = document.getElementById("workout").value;
-            localStorage.setItem("mondayWorkout", saveWorkout);
-             var saveTimer = document.getElementById("display").innerHTML ;
-             localStorage.setItem("mondayTimer", saveTimer);
-            
+            localStorage.setItem('mondayWorkout', saveWorkout);
+            var saveTimer = document.getElementById("display").innerHTML ;
+             localStorage.setItem('mondayTimer', saveTimer);
         }
 
         function get() {
