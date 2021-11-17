@@ -298,16 +298,40 @@ Date: Nov. 18, 2021
     <script>
       
       function save() {
+                      var soreTextSave = document.getElementById("sore_text");
+            localStorage.setItem('Mondaysore_text', soreTextSave.value);
+
+            var soreRatingSave = document.getElementById("selectSoreness").value;
+            localStorage.setItem('mondaySoreRating', soreRatingSave);
+
+            var moodTextSave = document.getElementById("mood_text").value;
+            localStorage.setItem('mondayMoodText', moodTextSave);
+
+            var moodRatingSave = document.getElementById("myRange").value;
+            localStorage.setItem('mondayMoodRating', moodRatingSave);
+
+            var moodRatingSave = document.getElementById("myRange").value;
+            localStorage.setItem('mondayMoodRating', moodRatingSave);
+
+            var saveWater = curIntake.innerHTML;
+            localStorage.setItem('mondayWater', saveWater);
+            var saveFood = foodListElement.innerHTML;
+            localStorage.setItem('MondayFood', saveFood);
+            var inputWorkout = document.getElementById("Workout").value;
+            localStorage.setItem('mondayUserWkt', inputWorkout);
+
+            var saveTimer = document.getElementById("display").innerHTML ;
+             localStorage.setItem('mondayTimer', saveTimer);
             //var soreTextSave = "Test sore text"; // find a way to store the text area input. document.getElementById("something").value doesn't work
             //example
-            var soreTextSave = document.getElementById("sore_text"); //working now!//example
-            localStorage.setItem("sore_text", soreTextSave.value);  //example 
+            //var soreTextSave = document.getElementById("sore_text"); //working now!//example
+            //localStorage.setItem("sore_text", soreTextSave.value);  //example 
             //dont know why only working once.
-            var moodTextSave = document.getElementById("moon_text"); // find a way to store the moon area input. document.getElementById("something").value doesn't work
-            localStorage.setItem("mood_text", moodTextSave.value);
+            //var moodTextSave = document.getElementById("moon_text"); // find a way to store the moon area input. document.getElementById("something").value doesn't work
+            //localStorage.setItem("mood_text", moodTextSave.value);
 
-            var workoutTextSave = document.getElementById("workout_text");
-            localStorage.setItem("workout_text", workoutTextSave.value);
+            //var workoutTextSave = document.getElementById("workout_text");
+            //localStorage.setItem("workout_text", workoutTextSave.value);
             /*
             var soreTextSave = document.getElementById("sore_text");
             localStorage.setItem('Mondaysore_text', soreTextSave.value);
