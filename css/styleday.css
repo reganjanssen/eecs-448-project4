@@ -85,14 +85,8 @@ li a:hover {
   background: #F0F6F7FF;
 }
 .ll-half {
-  /* position: absolute; */
-  float: left;
-  /* padding-top:px; */
-  padding-right: 450px;
-  /* width: 25%; */
-  /* height: 100%; */
-  /* background: #F0F6F7FF; */
-  text-align: left;
+  padding-top: 25px;
+  text-align: center;
   margin: auto;
 }
 textarea {
@@ -100,6 +94,7 @@ textarea {
   background-color: #F0F6F7FF;
   color: #086fc4;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 .workout-container {
   overflow: hidden;
