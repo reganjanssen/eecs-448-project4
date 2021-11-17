@@ -113,7 +113,7 @@ if(document.getElementById("myRange"))
   /**************************************************************************************************/
 
   /**
-   * The following block of code pertains to the filtering of workouts on the left half of workout div 
+   * The following block of code pertains to the filtering of workouts
    * Adapted from W3 schools
    */
   loadWorkout("all")
