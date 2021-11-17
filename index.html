@@ -40,33 +40,32 @@ Date: Nov. 18, 2021
                 <br>
                 <h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
                 <form id="weeklySummary">
-                    <table id="weeklySummary" style="text-align: left; display:left;">
+                    <table id="weeklySummary" style="text-align: left; border-top:2px solid lightblue;border-bottom: 2px solid lightblue;border-left:2px solid lightblue; border-right:2px solid lightblue;font-family: 'Courier New', Courier, monospace;">
                         <tr>
-                            <td>Total Workout Time: </td>
-                            <td></td>
+                            <td style="border-right:2px solid lightblue;width:350px;padding-top: 10px;">Total Workout Time per Week: </td>
+                            <td id="totalWorkout" style="width:200px; text-align:center;"></td>
+                        </tr>
+                        <tr class="even">
+                            <td style="border-right:2px solid lightblue;width:350px;">Average Workout Time per Day:</td>
+                            <td id="avgWorkout" style="width:200px; text-align:center;"></td>
                         </tr>
                         <tr>
-                            <td>Avg. Hours Worked out perday:</td>
-                            <td></td>
+                            <td style="border-right:2px solid lightblue;width:350px;">Average Mood per Day: </td>
+                            <td id="avgMood" style="width:200px; text-align:center;"></td>
+                        </tr>
+                        <tr class="even">
+                            <td style="border-right:2px solid lightblue;width:350px;">Average Soreness per Day: </td>
+                            <td id="avgSore" style="width:200px; text-align:center;"></td>
                         </tr>
                         <tr>
-                            <td>Avg. Mood: </td>
-                            <td></td>
+                            <td style="border-right:2px solid lightblue;width:350px;">Total Water Intake per Week: </td>
+                            <td id="totalWater" style="width:200px; text-align:center;"></td>
                         </tr>
-                        <tr>
-                            <td>Avg. Soreness: </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Total Water Intake: </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Avg. Water Intake: </td>
-                            <td></td>
+                        <tr class="even">
+                            <td style="border-right:2px solid lightblue;width:350px;padding-bottom:10px;">Average Water Intake per Day: </td>
+                            <td id="avgWater" style="width:200px; text-align:center;"></td>
                         </tr>
                     </table>
-                    <!-- <textarea name="summary" cols="180" rows="10">Your weekly summary will be shown here...</textarea> -->
                 </form><br><br>
                 <h2 style="text-align: left; font-size: 20pt; color: #2460A7ff">Select items to fill out your to do list: </h2><br><br>
                 <!--This next section of code contains the set-up for each table with its associated day-->
