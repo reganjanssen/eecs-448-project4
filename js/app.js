@@ -100,8 +100,7 @@ function trackerAlert(){
    * The following block of code pertains to the mood slider
    * Adapted from W3 schools
    */
-if(document.getElementById("myRange"))
-  {
+
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
   output.innerHTML = slider.value;
@@ -109,11 +108,11 @@ if(document.getElementById("myRange"))
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
-  }
+  
   /**************************************************************************************************/
 
   /**
-   * The following block of code pertains to the filtering of workouts
+   * The following block of code pertains to the filtering of workouts on the left half of workout div 
    * Adapted from W3 schools
    */
   loadWorkout("all")
@@ -167,8 +166,7 @@ if(document.getElementById("myRange"))
    */
 let totalIntake = 0
 const curdate = document.querySelector('#curdate') // this can be moved elswhere to display date
-const curIntake = document.querySelector('#curIntake')
- if(curdate = document.querySelector('#curdate') ){       
+const curIntake = document.querySelector('#curIntake')      
 curdate.innerHTML = ' ' + new Date().toDateString()
 curIntake.innerHTML = ' ' + '0L'
   // Takes in the amount of water specified and adds it to the total intake
@@ -182,79 +180,81 @@ function fill(qty) {
 // Displays the current intake
 curIntake.innerHTML = ' ' + totalIntake + 'L'
 }
- }
+ 
 /**************************************************************************************************/
 /** 
  * The following block of code pertains to the food tracker.
  * Adapted from https://semihdurmus.github.io/SD_03_Todo_List/
  **/
 
- const foodList = [];
- const foodListElement = document.querySelector("#myUL");
- 
- // add food to the list by hitting enter or using the add button
- document.querySelector("#add_button").addEventListener("click", addFood);
- document.querySelector("#myInput").addEventListener("keydown", function(e) {
-   if (e.keyCode == 13) {
-     addFood()
-   }
- });
- // inserts added inputs to food object
- function addFood() {
-   const foodText = document.querySelector("#myInput").value;
- 
-   if (foodText == "") {
-     alert("No item entered");
-   } else {
-     const foodObject = {
-       id: foodList.length,
-       foodText: foodText,
-     };
-     foodList.unshift(foodObject); // adds new items to top of list
-     displayFood();
-   }
- }
- // delete item on food list using the trashcan icon
- function deleteItem(x) {
-   foodList.splice(
-     foodList.findIndex((item) => item.id == x),
-     1
-   );
-   displayFood();
- }
- // function to display the food items in a list. Takes in the user input, returns a list of items
- function displayFood() {
-   foodListElement.innerHTML = "";
-   document.querySelector("#myInput").value = "";
- 
-   foodList.forEach((item) => {
-     const listElement = document.createElement("li");
-     const delBtn = document.createElement("i");
- 
-     listElement.innerHTML = item.foodText;
-     listElement.setAttribute("data-id", item.id);
- 
-     delBtn.setAttribute("data-id", item.id);
-     delBtn.classList.add("far");
-     delBtn.classList.add("fa-trash-alt");
-     delBtn.setAttribute("data-id", item.id);
- 
-     if (item.isDone) {
-       listElement.classList.add("checked");
-     }
- 
-     listElement.addEventListener("click", function (e) {
-       const selectedId = e.target.getAttribute("data-id");
-       doneFood(selectedId);
-     });
- 
-     delBtn.addEventListener("click", function (e) {
-       const delId = e.target.getAttribute("data-id");
-       deleteItem(delId);
-     });
- 
-     foodListElement.appendChild(listElement);
-     listElement.appendChild(delBtn);
-   });
- }
+const foodList = [];
+
+const foodListElement = document.querySelector("#myUL");
+
+// add food to the list by hitting enter or using the add button
+document.querySelector("#add_button").addEventListener("click", addFood);
+document.querySelector("#myInput").addEventListener("keydown", function(e) {
+  if (e.keyCode == 13) {
+    addFood()
+  }
+});
+// inserts added inputs to food object
+function addFood() {
+  const foodText = document.querySelector("#myInput").value;
+
+  if (foodText == "") {
+    alert("No item entered");
+  } else {
+    const foodObject = {
+      id: foodList.length,
+      foodText: foodText,
+    };
+    foodList.unshift(foodObject); // adds new items to top of list
+    displayFood();
+  }
+}
+// delete item on food list using the trashcan icon
+function deleteItem(x) {
+  foodList.splice(
+    foodList.findIndex((item) => item.id == x),
+    1
+  );
+  displayFood();
+}
+
+// function to display the food items in a list. Takes in the user input, returns a list of items
+function displayFood() {
+  foodListElement.innerHTML = "";
+  document.querySelector("#myInput").value = "";
+
+  foodList.forEach((item) => {
+    const listElement = document.createElement("li");
+    const delBtn = document.createElement("i");
+
+    listElement.innerHTML = item.foodText;
+    listElement.setAttribute("data-id", item.id);
+
+    delBtn.setAttribute("data-id", item.id);
+    delBtn.classList.add("far");
+    delBtn.classList.add("fa-trash-alt");
+    delBtn.setAttribute("data-id", item.id);
+
+    if (item.isDone) {
+      listElement.classList.add("checked");
+    }
+
+    listElement.addEventListener("click", function (e) {
+      const selectedId = e.target.getAttribute("data-id");
+      doneFood(selectedId);
+    });
+
+    delBtn.addEventListener("click", function (e) {
+      const delId = e.target.getAttribute("data-id");
+      deleteItem(delId);
+    });
+
+    foodListElement.appendChild(listElement);
+    listElement.appendChild(delBtn);
+  });
+}
 /**************************************************************************************************/
