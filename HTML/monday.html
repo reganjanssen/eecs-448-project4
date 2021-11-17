@@ -280,11 +280,11 @@ Date: Nov. 18, 2021
                             </div>
                         </form>
                     </div>
-                    <p style="color:#F0F6F7FF;text-align: center;">Or</p>
+                     <p style="color:#F0F6F7FF;text-align: center;">Or</p>
                     <div class="workoutDisplay" style="text-align: center;">
                         <h4>Write your own workout:</h4>
                         <form id="userWorkout" style="padding-left: 20px;">
-                            <textarea name="workout" id = "Workout" cols="65"
+                            <textarea name="workout" id = "Workout_text" cols="65"
                                 rows="5">Use this space to write your own workout or as a space to write additional notes...</textarea>
                         </form>
             </header>
@@ -309,7 +309,18 @@ Date: Nov. 18, 2021
     //adapted from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
     <script>
       
-   function save() {
+      function save() {
+            //var soreTextSave = "Test sore text"; // find a way to store the text area input. document.getElementById("something").value doesn't work
+            //example
+            var soreTextSave = document.getElementById("sore_text"); //working now!//example
+            localStorage.setItem("sore_text", soreTextSave.value);  //example 
+            //dont know why only working once.
+            var moodTextSave = document.getElementById("moon_text"); // find a way to store the moon area input. document.getElementById("something").value doesn't work
+            localStorage.setItem("mood_text", moodTextSave.value);
+
+            var workoutTextSave = document.getElementById("workout_text");
+            localStorage.setItem("workout_text", workoutTextSave.value);
+            /*
             var soreTextSave = document.getElementById("sore_text");
             localStorage.setItem('Mondaysore_text', soreTextSave.value);
 
@@ -333,17 +344,15 @@ Date: Nov. 18, 2021
             localStorage.setItem('mondayUserWkt', inputWorkout);
             var saveWorkout = document.getElementById("workout").value;
             localStorage.setItem('mondayWorkout', saveWorkout);
-            var saveTimer = document.getElementById("display").innerHTML ;
-             localStorage.setItem('mondayTimer', saveTimer);
+            var saveTimer = document.getElementById("display").innerHTML;
+            localStorage.setItem('mondayTimer', saveTimer);
+            */
         }
 
         function get() {
-            var soreTextSave = "Test 123";
-            localStorage.setItem("mondaySoreText", soreTextSave);
-
-            document.getElementById("sore_text").innerHTML = localStorage.getItem("mondaySoreText");
-            //document.getElementById("selectSoreness").innerHTML = localStorage.getItem("selectSoreness");
-            document.getElementById("mood_text").innerHTML = localStorage.getItem("mondaySoreText");
+            document.getElementById("sore_text").innerHTML = localStorage.getItem("sore_text");
+            document.getElementById("mood_text").innerHTML = localStorage.getItem("mood_text");
+            document.getElementById("workout_text").innerHTML = localStorage.getItem("workout_text");
 
         }
 
