@@ -15,6 +15,7 @@ let distance;
 let cardioSummary;
 
 //adapted from https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+// Function to display the date at the top of the day.html pages
 function currentDate()
 {
   var currentDay = new Date();
@@ -40,36 +41,36 @@ function saveInput(input)
       localStorage.setItem(itemKey, input.value);
   });
 }
+// Commented out for now, idk if this is being used?
+// function workoutType(choice) {
+//     if (choice == 1) {
+//         document.getElementById("cardio").disabled = true;
+//         document.getElementById("strength").disabled = false;
+//         cardioWork = window.prompt("Enter name of workout");
+//         timeWork = window.prompt("Enter time for timer");
+//         distance = window.prompt("Enter distance");
+//         cardioSummary = "cardioWork: " + cardioWork + " timeWork :" + timeWork + " distance : " + distance;
+//         // I don't know why we need to input that. And how we use for that. we can just set up the name and time and the distance for the selectWorkout;
+//         if (document.getElementById("cardio").disabled == true) {
+//             alert(cardioSummary);
+//             window.location.href = "../HTML/timer.html";
+//         }
 
-function workoutType(choice) {
-    if (choice == 1) {
-        document.getElementById("cardio").disabled = true;
-        document.getElementById("strength").disabled = false;
-        cardioWork = window.prompt("Enter name of workout");
-        timeWork = window.prompt("Enter time for timer");
-        distance = window.prompt("Enter distance");
-        cardioSummary = "cardioWork: " + cardioWork + " timeWork :" + timeWork + " distance : " + distance;
-        // I don't know why we need to input that. And how we use for that. we can just set up the name and time and the distance for the selectWorkout;
-        if (document.getElementById("cardio").disabled == true) {
-            alert(cardioSummary);
-            window.location.href = "../HTML/timer.html";
-        }
-
-    }
-    if (choice == 2) {
-        document.getElementById("strength").disabled = true;
-        document.getElementById("cardio").disabled = false;
-        strengthWork = window.prompt("Enter name of workout");
-        reps = window.prompt("Enter time for timer");
-        weight = window.prompt("Enter distance");
-        strengthSummary = "strengthWork: " + strengthWork + " reps :" + reps + " weight : " + weight;
-        if (document.getElementById("strength").disabled == true)
-        {
-            alert(strengthSummary);
-            window.location.href = "../HTML/timer.html";
-        }
-    }
-}
+//     }
+//     if (choice == 2) {
+//         document.getElementById("strength").disabled = true;
+//         document.getElementById("cardio").disabled = false;
+//         strengthWork = window.prompt("Enter name of workout");
+//         reps = window.prompt("Enter time for timer");
+//         weight = window.prompt("Enter distance");
+//         strengthSummary = "strengthWork: " + strengthWork + " reps :" + reps + " weight : " + weight;
+//         if (document.getElementById("strength").disabled == true)
+//         {
+//             alert(strengthSummary);
+//             window.location.href = "../HTML/timer.html";
+//         }
+//     }
+// }
 
 function weeklySummary()
 {
@@ -84,16 +85,16 @@ function trackerAlert(){
     alert("Don't forget to log your wellness!")
   }
 
-  // Date selector for day.html files, will dislay the data from the specified day
-  var dateControl = document.querySelector('input[type="date"]');
+  // Date selector for day.html files, will dislay the data from the specified day, commented out for now dont believe needed
+  // var dateControl = document.querySelector('input[type="date"]');
   
-  function loadDay() {
-    document.getElementById('selectedDate').innerHTML = dateControl.value;
-  }
+  // function loadDay() {
+  //   document.getElementById('selectedDate').innerHTML = dateControl.value;
+  // }
   
   /**************************************************************************************************/
   /**
-   * The following block of code pertains to the mood slider
+   * The following block of code pertains to the mood slider, adapted from W3 schools
    */
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
@@ -105,7 +106,7 @@ function trackerAlert(){
   /**************************************************************************************************/
 
   /**
-   * The following block of code pertains to the filtering of workouts on the left half of workout div
+   * The following block of code pertains to the filtering of workouts on the left half of workout div, adapted from W3 schools
    */
   loadWorkout("all")
   // Function to display the select workout type

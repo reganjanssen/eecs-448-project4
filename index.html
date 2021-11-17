@@ -11,6 +11,7 @@ Date: Nov. 18, 2021
     <title>fitX</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js" charset="utf-8"></script>
+    <!--Function to save the selected activities in the table-->
     <script>
         function save() {
             var selectActivity = document.getElementById('select-activity').value;
@@ -22,7 +23,6 @@ Date: Nov. 18, 2021
         <div class="header">
             <div id="top">
                     <img src="images/fitX.png" style="width:100px;height:60px;"/>
-                <!-- <h1 style="text-align: right; font-weight: bold;">fitX<sub style="font-size: 9pt;">by RJCAN</sub> </h1> -->
             </div>
         </div>
                 <ul> <!--This will link to a new page associated with each day-->
@@ -37,6 +37,7 @@ Date: Nov. 18, 2021
                 </ul>
                 <p><b>Hi welcome to fitX!</b><br> This is the app where you can accomplish all your physical and mental goals. <br>Use this app to create to-do lists, set reminders, set workouts, and track your progress.</p>
                 <br>
+                <!--Table for the weekly summary display-->
                 <h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
                 <form id="weeklySummary">
                     <table id="weeklySummary" style="text-align: left; border-top:2px solid lightblue;border-bottom: 2px solid lightblue;border-left:2px solid lightblue; border-right:2px solid lightblue;font-family: 'Courier New', Courier, monospace;">
@@ -1134,7 +1135,9 @@ Date: Nov. 18, 2021
                                     <option value="Friends">Friends</option></select></td>
                             </tr>
                         </table></p></div>
+                        <!--Allows users to easoly go back to top of page-->
                 <p style="text-align: center;"><a href="#top">Top</a></p>
+                <!--Buttons to save the page and clear the page, the functions are defined in this html page-->
                 <div id="botttonBtns" style="text-align: center;  padding-right:30px; padding-bottom: 50px;">
                 <button onclick="reset()">Reset Week</button><button id="resetWeek" onclick="save()">Save Week</button></div>
               </body>    
@@ -1143,6 +1146,7 @@ Date: Nov. 18, 2021
                     <h2 style="color:#2460A7ff"><i>fitX<sub style="font-size: 9pt;">by RJCAN</sub></i></h2></header>
                 </footer>          
     <script>
+        // function to reset the local storage
       function reset()
       {
         localStorage.clear();
