@@ -38,7 +38,6 @@ Date: Nov. 18, 2021
                 </ul>
                 <p><b>Hi welcome to fitX!</b><br> This is the app where you can accomplish all your physical and mental goals. <br>Use this app to create to-do lists, set reminders, set workouts, and track your progress.</p>
                 <br>
-                <button onclick="reset()">Reset Week</button>
                 <h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
                 <form id="weeklySummary">
                     <table id="weeklySummary" style="text-align: left; display:left;">
@@ -1136,8 +1135,9 @@ Date: Nov. 18, 2021
                                 <option value="Friends">Friends</option></select></td>
                         </tr>
                     </table></p></div>
-                    <button onclick="save()">Save Content</button>
                 <p style="text-align: center;"><a href="#top">Top</a></p>
+                <div id="botttonBtns" style="text-align: center;  padding-right:30px; padding-bottom: 50px;">
+                <button onclick="reset()">Reset Week</button><button id="resetWeek" onclick="save()">Save Week</button></div>
               </body>    
                 <footer>
                     <header style="background-color:rgb(209, 151, 151);">

@@ -28,8 +28,8 @@ th {
   text-align: center;
   letter-spacing: 0.lem;
   font-size: 90%;
-  border-bottom: 2px solid #111111;
-  border-top: 1px solid #999;
+  border-bottom: 2px solid #2460A7ff;
+  border-top: 1px solid #2460A7ff;
   color:#2460A7FF;
 }
 
@@ -107,11 +107,18 @@ text-align: center;
 width:auto;
 height: fit-content;
 }
-
-.option {
-color: lightblue;
+button {
+color:#F0F6F7FF;
+border-radius: 16px;
+font-family: 'Courier New', Courier, monospace;
+background-color: #2460A7FF;
+float: right;
+padding:10px;
+text-align: center;
 }
-
+button:hover {
+background-color: lightblue;
+}
 .footer {
 color:#2460A7FF;
 font-family: 'Courier New', Courier, monospace;
