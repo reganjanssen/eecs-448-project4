@@ -194,14 +194,15 @@ Date: Nov. 18, 2021
                                     </h5>
                                 </label>         
                                 </div>
-                                <div class="filterDiv strength" id="Workout3">
+                                <div class="filterDiv cardio" id="Workout3">
                                     <input type="radio" id="workout">
                                     <label for="workout3"><h5>Workout 3:
-                                            <p>Squats: 3x20<br>
-                                                Lunges: 4x12<br></p>
+                                            <p>Run:<br>
+                                                3 miles</p>
                                         </h5>
                                     </label>
                                 </div>
+                               
                                 <div class="filterDiv cardio" id="Workout4">
                                     <input type="radio" id="workout">
                                     <label for="workout4"><h5>Workout 4:
@@ -218,11 +219,11 @@ Date: Nov. 18, 2021
                                         </h5>
                                     </label>
                                 </div>
-                                <div class="filterDiv cardio" id="Workout6">
+                                <div class="filterDiv strength" id="Workout6">
                                     <input type="radio" id="workout">
                                     <label for="workout6"><h5>Workout 6:
-                                            <p>Run:<br>
-                                                3 miles</p>
+                                            <p>Squats: 3x20<br>
+                                                Lunges: 4x12<br></p>
                                         </h5>
                                     </label>
                                 </div>
@@ -246,7 +247,7 @@ Date: Nov. 18, 2021
                                 </div>
                                 <div class="filterDiv cardio" id="Workout9">
                                     <input type="radio" id="workout">
-                                    <label for="workout9"><h5>Workout 9:
+                                    <label for="workout9"><h5>Workout 9:<br><br>
                                             <p>Jumping Jacks: 4x50<br>
                                                 Burpees: 4x8<br></p>
                                         </h5>
@@ -255,14 +256,13 @@ Date: Nov. 18, 2021
                                 <div class="filterDiv cardio" id="Workout10">
                                     <input type="radio" id="workout">
                                     <label for="workout10"><h5>Workout 10:
-                                            <p>6x: 1 min Burpees,<br>
-                                                1 min high knees</p>
+                                        <p>Burpees: 1 min; High Knees: 1 min <br>x 6</p>
                                         </h5>
                                     </label>
                                 </div>
                                 <div class="filterDiv strength" id="Workout11">
                                     <input type="radio" id="workout">
-                                    <label for="workout11"><h5>Workout 11:
+                                    <label for="workout11"><h5>Workout 11:<br><br><br>
                                             <p>Sit-ups: 3x15<br>
                                                 Plank: 1 min</p>
                                         </h5>
@@ -272,19 +272,19 @@ Date: Nov. 18, 2021
                                     <input type="radio" id="workout">
                                     <label for="workout12"><h5>Workout 12:
                                             <p>Intervals:<br>
-                                                5x: 3 min run,<br>
-                                                2 min jog/walk</p>
+                                                3 min run,<br>
+                                                2 min jog/walk x 5</p>
                                         </h5>
                                     </label>
                                 </div>
                             </div>
                         </form>
                     </div>
-                     <p style="color:#F0F6F7FF;text-align: center;">Or</p>
+                    <p style="color:#F0F6F7FF;text-align: center;">Or</p>
                     <div class="workoutDisplay" style="text-align: center;">
                         <h4>Write your own workout:</h4>
                         <form id="userWorkout" style="padding-left: 20px;">
-                            <textarea name="workout" id = "Workout_text" cols="65"
+                            <textarea name="workout" id = "Workout" cols="65"
                                 rows="5">Use this space to write your own workout or as a space to write additional notes...</textarea>
                         </form>
             </header>
@@ -309,18 +309,7 @@ Date: Nov. 18, 2021
     //adapted from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
     <script>
       
-      function save() {
-            //var soreTextSave = "Test sore text"; // find a way to store the text area input. document.getElementById("something").value doesn't work
-            //example
-            var soreTextSave = document.getElementById("sore_text"); //working now!//example
-            localStorage.setItem("sore_text", soreTextSave.value);  //example 
-            //dont know why only working once.
-            var moodTextSave = document.getElementById("moon_text"); // find a way to store the moon area input. document.getElementById("something").value doesn't work
-            localStorage.setItem("mood_text", moodTextSave.value);
-
-            var workoutTextSave = document.getElementById("workout_text");
-            localStorage.setItem("workout_text", workoutTextSave.value);
-            /*
+   function save() {
             var soreTextSave = document.getElementById("sore_text");
             localStorage.setItem('Mondaysore_text', soreTextSave.value);
 
@@ -344,15 +333,17 @@ Date: Nov. 18, 2021
             localStorage.setItem('mondayUserWkt', inputWorkout);
             var saveWorkout = document.getElementById("workout").value;
             localStorage.setItem('mondayWorkout', saveWorkout);
-            var saveTimer = document.getElementById("display").innerHTML;
-            localStorage.setItem('mondayTimer', saveTimer);
-            */
+            var saveTimer = document.getElementById("display").innerHTML ;
+             localStorage.setItem('mondayTimer', saveTimer);
         }
 
         function get() {
-            document.getElementById("sore_text").innerHTML = localStorage.getItem("sore_text");
-            document.getElementById("mood_text").innerHTML = localStorage.getItem("mood_text");
-            document.getElementById("workout_text").innerHTML = localStorage.getItem("workout_text");
+            var soreTextSave = "Test 123";
+            localStorage.setItem("mondaySoreText", soreTextSave);
+
+            document.getElementById("sore_text").innerHTML = localStorage.getItem("mondaySoreText");
+            //document.getElementById("selectSoreness").innerHTML = localStorage.getItem("selectSoreness");
+            document.getElementById("mood_text").innerHTML = localStorage.getItem("mondaySoreText");
 
         }
 
