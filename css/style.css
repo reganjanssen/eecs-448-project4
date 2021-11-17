@@ -124,9 +124,24 @@ color:#2460A7FF;
 font-family: 'Courier New', Courier, monospace;
 text-align: center;
 }
-select {
-background-color:#F0F6F7FF;
+textarea {
+border: 1px solid #85B3D1FF; 
+background-color: #F0F6F7FF;
+color: #086fc4;
 font-family: 'Courier New', Courier, monospace;
-color:#2460A7FF;
-padding: 8px;
+text-align: center;
+}
+#left {
+float:left;
+padding-left:50pt;
+}
+#right {
+float:right;
+padding-right:50pt;
+}
+#center {
+float:center;
+}
+#friday {
+padding-top: 70%;
 }
