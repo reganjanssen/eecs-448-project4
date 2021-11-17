@@ -1,4 +1,14 @@
-//function for saving the lists on the index page and reloading them. 
+/**
+File Name: index.js
+Authors: Regan Janssen, Andrew Loaiza, Chen Lu, Jui Nagarkar, Natasha Shirley
+Description: JavaScript program that contains the functionality for the fitX application
+Date: Nov. 18, 2021
+*///
+ /**************************************************************************************************/
+ /** The following block of code pertains to the
+  *  function for saving the lists on the index page and reloading them. 
+  */
+
 function save() {
    
     //monday save list 
@@ -29,6 +39,8 @@ function save() {
     temp = document.getElementById("mon13").value;
     localStorage.setItem("mon13", temp);
 
+   
+    
     //tuesday save list 
     var temp = document.getElementById("tue1").value;
     localStorage.setItem("tue1", temp);
@@ -144,7 +156,10 @@ function save() {
 
 
 
-
+ /**************************************************************************************************/
+ /** The following block of code pertains to the
+  *  function for saving the lists on the index page and reloading them. 
+  */
 function reloadPage()
 {
     ///monday load list
