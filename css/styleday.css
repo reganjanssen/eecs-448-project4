@@ -95,6 +95,12 @@ li a:hover {
   text-align: left;
   margin: auto;
 }
+textarea {
+  border: 1px solid #85B3D1FF; 
+  background-color: #F0F6F7FF;
+  color: #086fc4;
+  font-family: 'Courier New', Courier, monospace;
+}
 .workout-container {
   overflow: hidden;
   justify-content: center;
