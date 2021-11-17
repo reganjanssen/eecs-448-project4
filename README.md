@@ -7,12 +7,14 @@
   <small> fitX includes a mood tracker, soreness tracker, water tracker, and nutrition tracker. It also allows you to select workout(s) or write in your own. You can specify whether you want a cardio or strength workout and then can start the workout right on the app! Each page contains a 'Save Day' button where when pressed it uploads the user inputted data to your local storage. This data will then be displayed on the index.html page in the weekly summary section.</small>
 <h2>File Explainations:</h2>
 <ul>
-  <li>Documentation: This folder includes all documented artifacts for this project. This includes the GTA approved artifact, time-logging of project, an explaination of the design paradigm used, the software architecture used, a UML diagram, the design patterns used, and a works cited document.</li>
+  <li>Documentation: This folder includes all documented artifacts for this project. This includes the GTA approved artifact, time-logging of project, the deployment and maintenance plans, a code review, a test suite, a defect tracker, our integration strategy, and a works cited document.</li>
   <li>HTML: This folder contains all the individual days .html files e.g 'monday.html'</li>
   <li>css: This folder contains the .css files for the app, a style.css for the home page, and a styleday.css for all other days.</li>
   <li>images: This folder contains any images used on the app.</li>
   <li>js: This folder contains the js files used for the app.</li>
-  <li>index.html: This file will take you to the home page of the app.</li></ul>
+  <li>index.html: This file will take you to the home page of the app.</li>
+  <li>Project Presentation: This folder contains a video presentation of the project including a description of the features as well as a demo of the application.</li>
+</ul>
 <h2>User Instructions:</h2>
   <small> To open the app, download the zip file on the repository. In your downloads folder open the index.html file, this will take you to your preferred web-browser. Once in the web-browser you can simply switch from day-to-day by clicking on the links at the top of the page.</small>
   <h2>Next Steps:</h2>
