@@ -1,6 +1,15 @@
-// Timer adapted from author Omar Benseddik
+/**
+File Name: timer.js
+Authors: Regan Janssen, Andrew Loaiza, Chen Lu, Jui Nagarkar, Natasha Shirley
+Description: JavaScript program that contains the functionality for the fitX application
+Date: Nov. 18, 2021
+*/
 
-// Function to convert time to a format of hours, minutes, seconds, and milliseconds
+ /**************************************************************************************************/
+ /** The following block of code pertains to converting time to a format of hours, minutes, seconds, and milliseconds
+  * Adapted from author Omar Benseddik
+  */
+
 function timeToString(time) {
     let diffInHrs = time / 3600000;
     let hh = Math.floor(diffInHrs);
