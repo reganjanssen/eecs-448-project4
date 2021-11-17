@@ -124,3 +124,9 @@ color:#2460A7FF;
 font-family: 'Courier New', Courier, monospace;
 text-align: center;
 }
+select {
+background-color:#F0F6F7FF;
+font-family: 'Courier New', Courier, monospace;
+color:#2460A7FF;
+padding: 8px;
+}
