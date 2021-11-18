@@ -320,9 +320,11 @@ Date: Nov. 18, 2021
     <script src="../js/timer.js"></script>
     <script src="../js/app.js"></script>
 
-    //adapted from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
     <script>
-
+        /** The save functionality is the same throughout all day.html files, except each day contains its own key and value pairs.
+         * The following code allows users to save the inputted data to the local storage when the hit the "save day" button
+         * Adapted from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+         **/
         function save() {
             var soreTextSave = document.getElementById("sore_text");
             localStorage.setItem('Mondaysore_text', soreTextSave.value);
@@ -351,6 +353,9 @@ Date: Nov. 18, 2021
             localStorage.setItem('mondayTimer', saveTimer);
         }
 
+        /** The following code is for the test suite, it inputs values for the data that will be displayed on the weekly summary,
+         * and once that data is saved, it will return to the home page and display the new data in the weekly summary section.
+         **/
         function test() {
             //test text area store in local, and then reload.
             var testTextSave = "Test 2";
@@ -364,7 +369,6 @@ Date: Nov. 18, 2021
             var test_time = "99:99:99";
             localStorage.setItem("testtime", test_time);
             document.getElementById("display").innerHTML = localStorage.getItem("testtime");
-
 
             //test mood range
             var testrange = "10";
@@ -381,13 +385,8 @@ Date: Nov. 18, 2021
             var option = "5";
             localStorage.setItem("testoption", option);
             document.getElementById("selectSoreness").value = localStorage.getItem("testoption");
-            //test nutrition Log
-            /*
-            var test_Nutrition= "test2";
-            localStorage.setItem("testNutrition",test_Nutrition);
-            document.getElementById("myUL").innerHTML = localStorage.getItem("testNutrition");
-            */
-            alert("Test 2 cont. Will return to main page to check the weekly summary on 5s.")
+          
+            alert("Test 2 starting. Will return to main page to check the weekly summary in 15s.")
             save();
             setTimeout(function () {
                 location.href="../index.html";
@@ -395,28 +394,6 @@ Date: Nov. 18, 2021
             }, 15 * 1000);
 
         }
-
-    //adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
-    </script>
-
-
-    <script>
-    //var saveSoreText = document.getElementById(soreText);
-    //saveInput(saveSoreText);
-    //var saveSoreRating = document.getElementById(mondaySoreRating);
-    //saveInput(saveSorRating);
-    //var saveMoodText = document.getElementById(mondayMoodText);
-    //saveInput(saveMoodText);
-    //var saveSoreRating = document.getElementById(mondayMoodRating);
-    //saveInput(saveMoodRating);
-    </script>
-
-
-    <script src="../js/timer.js"></script>
-    <script src="../js/app.js"></script>
-    <script>
-
     </script>
 </body>
-
 </html>

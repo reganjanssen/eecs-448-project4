@@ -5,15 +5,6 @@ Description: JavaScript program that contains the functionality for the fitX app
 Date: Nov. 18, 2021
 */
 
-let strengthWork;
-let reps;
-let weight;
-let strengthSummary;
-let cardioWork;
-let timeWork;
-let distance;
-let cardioSummary;
-
  /**************************************************************************************************/
  /** The following block of code pertains to the date display at the top of the day.html pages
   * Adapted from https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
@@ -28,8 +19,6 @@ function currentDate()
   currentDay = mm + '/' + dd + '/' + yyyy;
   return (currentDay);
 }
-
-
 
  /**************************************************************************************************/
  /** The following block of code pertains to the pop up alert for tracking mood and soreness

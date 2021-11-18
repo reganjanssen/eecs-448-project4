@@ -457,6 +457,10 @@ Date: Nov. 18, 2021
     }
 </script>
 <script>
+    /**The following code is for our test suite, it contains a test for each days to-do list. 
+    * It inputs 2 different values to each day, 1 that will be saved to local storage and will persist after reload, 
+    * and one that will not be saved. 
+    **/
     function test() {
         let testtext = "save test 1";
         let testtext2 = "Not save test 1";
@@ -490,7 +494,7 @@ Date: Nov. 18, 2021
 
         document.getElementById("fri2").innerHTML = testtext2;
 
-        alert("Test 1 Start. Will reload to test not save data on 5s.")
+        alert("Test 1 Starting. Will reload to test the un-saved data in 15s.")
         setTimeout(function () {
             location.reload();
             alert("Test 1 Done. ");
@@ -499,7 +503,8 @@ Date: Nov. 18, 2021
     }
 </script>
 <script>
-
+    /** The following code allows for the user saved data to be displayed in the weekly summary**/
+    
     //timer get save
     let temp1 = localStorage.getItem('mondayTimer');
     let temp2 = localStorage.getItem('tuesdayTimer');
