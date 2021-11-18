@@ -13,7 +13,7 @@
   <li>images: This folder contains any images used on the app.</li>
   <li>js: This folder contains the js files used for the app.</li>
   <li>index.html: This file will take you to the home page of the app.</li>
-  <li>Project Presentation: This folder contains a video presentation of the project including a description of the features as well as a demo of the application.</li>
+  <li>Project Presentation: This folder contains a link to ourvideo presentation of the project including a description of the features as well as a demo of the application.</li>
 </ul>
 <h2>User Instructions:</h2>
   <small> To open the app, download the zip file on the repository. In your downloads folder open the index.html file, this will take you to your preferred web-browser. Once in the web-browser you can simply switch from day-to-day by clicking on the links at the top of the page.</small>
