@@ -298,7 +298,7 @@ Date: Nov. 18, 2021
         <h1 style="font-size: smaller;color:lightblue;">fitX<sub style="font-size: smaller;">by RJCAN</sub> </h1>
         <div class="save">
             <button id="saveButton" onclick="save()">Save Day</button>
-            <button id="getButton" onclick="get()">Get Info</button>
+            <button id="getButton" onclick="test()">Test</button>
 
         </div>
     </footer>
@@ -338,14 +338,45 @@ Date: Nov. 18, 2021
              localStorage.setItem('mondayTimer', saveTimer);
         }
 
-        function get() {
-            var soreTextSave = "Test 123";
-            localStorage.setItem("mondaySoreText", soreTextSave);
+        function test() {
+            //test text area store in local, and then reload.
+            var testTextSave = "Test 2";
+            localStorage.setItem("test", testTextSave);
+            document.getElementById("sore_text").innerHTML = localStorage.getItem("test");
+            document.getElementById("mood_text").innerHTML = localStorage.getItem("test");
+            document.getElementById("workoutNum").innerHTML = localStorage.getItem("test");
+            document.getElementById("Workout").innerHTML = localStorage.getItem("test");
+            
+            //test time;
+            var test_time = "99:99:99";
+            localStorage.setItem("testtime", test_time);
+            document.getElementById("display").innerHTML = localStorage.getItem("testtime");
+            
 
-            document.getElementById("sore_text").innerHTML = localStorage.getItem("mondaySoreText");
-            //document.getElementById("selectSoreness").innerHTML = localStorage.getItem("selectSoreness");
-            document.getElementById("mood_text").innerHTML = localStorage.getItem("mondaySoreText");
+            //test mood range
+            var testrange = "10";
+            localStorage.setItem("testrange", testrange);
+            document.getElementById("myRange").value = localStorage.getItem("testrange");
+            document.getElementById("demo").innerHTML = localStorage.getItem("testrange");
+            
+            //test water track
+            var testwaterlog = "999L";
+            localStorage.setItem("testwater",testwaterlog);
+            document.getElementById("curIntake").innerHTML = localStorage.getItem("testwater");
 
+            //test soreness option
+            var option = "5";
+            localStorage.setItem("testoption",option);
+            document.getElementById("selectSoreness").value = localStorage.getItem("testoption");
+            //test nutrition Log
+            /*
+            var test_Nutrition= "test2";
+            localStorage.setItem("testNutrition",test_Nutrition);
+            document.getElementById("myUL").innerHTML = localStorage.getItem("testNutrition");
+            */
+
+            alert("Test done");
+            save();
         }
 
     //adapted from https://stackoverflow.com/questions/17087636/how-to-save-data-from-a-form-with-html5-local-storage
