@@ -6,483 +6,565 @@ Date: Nov. 18, 2021
 -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>fitX</title>
     <link rel="stylesheet" href="css/style.css">
     <!--Javascript file needed to save the user inputs and reload them onto the page-->
     <script src="js/index.js"></script>
-  </head>
-    <body onload="reloadPage()">
-        <div class="header">
-            <div id="top">
-                    <img src="images/fitX.png" style="width:100px;height:60px;"/>
-            </div>
+</head>
+
+<body onload="reloadPage()">
+    <div class="header">
+        <div id="top">
+            <img src="images/fitX.png" style="width:100px;height:60px;" />
         </div>
-                <ul> <!--This will link to a new page associated with each day-->
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="HTML/monday.html">Monday</a></li>
-                    <li><a href="HTML/tuesday.html">Tuesday</a></li>
-                    <li><a href="HTML/wednesday.html">Wednesday</a></li>
-                    <li><a href="HTML/thursday.html">Thursday</a></li>
-                    <li><a href="HTML/friday.html">Friday</a></li>
-                    <li><a href="HTML/saturday.html">Saturday</a></li>
-                    <li><a href="HTML/sunday.html">Sunday</a></li>
-                </ul>
-                <p><b>Hi welcome to fitX!</b><br> This is the app where you can accomplish all your physical and mental goals. <br>Use this app to create to-do lists, set reminders, set workouts, and track your progress.</p>
-                <br>
-                <!--Table for the weekly summary display-->
-                <h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
-                <form id="weeklySummary">
-                <table id="weeklySummary" style="text-align: left;border-top:2px solid lightblue;border-bottom: 2px solid lightblue;border-left:2px solid lightblue; border-right:2px solid lightblue;font-family: 'Courier New', Courier, monospace;">
-                        <tr>
-                            <th style="border-top: transparent;"></th>
-                            <th style="border-top: transparent;">Monday</th>
-                            <th style="border-top: transparent;">Tuesday</th>
-                            <th style="border-top: transparent;">Wednesday</th>
-                            <th style="border-top: transparent;">Thursday</th>
-                            <th style="border-top: transparent;">Friday</th>
-                            <th style="border-top: transparent;">Saturday</th>
-                            <th style="border-top: transparent;">Sunday</th>
-                        </tr>
-                        <tr>
-                            <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Workout Time</td>
-                            <td id="monWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue" > <span id = mondayWkt></span></td>
-                            <td id="tuesWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue" > <span id = tuesdayWkt></span></td>
-                            <td id="wednesdayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue" > <span id = wedWkt></span></td>
-                            <td id="thursdayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue" > <span id = thursWkt></span></td>
-                            <td id="fridayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue" > <span id = friWkt></span></td>
-                            <td id="saturdayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue" > <span id = satWkt></span></td>
-                            <td id="sundayWorkout" style="width:100px; text-align:center;" > <span id = sunWkt></span></td>
-                        </tr>
-                        <tr class="even">
-                            <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Mood Rating</td>
-                            <td id="modayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = mondayMood></span></td>
-                            <td id="tuesdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = tuesdayMood></span></td>
-                            <td id="wednesdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = wedMood></span></td>
-                            <td id="thursdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = thursMood></span></td>
-                            <td id="fridayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = friMood></span></td>
-                            <td id="saturdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = satMood></span></td>
-                            <td id="sundayMood" style="width:100px; text-align:center;"><span id = sunMood></span></td>
-                        </tr>
-                        <tr>
-                            <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Soreness Rating</td>
-                            <td id="mondaySoreness" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = monSore></span></td>
-                            <td id="tuesdaySoreness" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = tuesSore></span></td>
-                            <td id="wednesdaySoreness" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = wedSore></span></td>
-                            <td id="thursdaySore" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = thursSore></span></td>
-                            <td id="fridaySore" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = friSore></span></td>
-                            <td id="saturdaySore" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = satSore></span></td>
-                            <td id="sundaySore" style="width:100px; text-align:center;"><span id = sunSore></span></td>
-                        </tr>
-                        <tr class="even">
-                            <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Water Intake</td>
-                            <td id="mondayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = monWater></span></td>
-                            <td id="tuesdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = tuesWater></span></td>
-                            <td id="wednesdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = wedWater></span></td>
-                            <td id="thursdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = thursWater></span></td>
-                            <td id="fridayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = friWater></span></td>
-                            <td id="saturdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span id = satWater></span></td>
-                            <td id="sundayWater" style="width:100px; text-align:center;"><span id = sunWater></span></td>
-                        </tr>
-                    </table>
-                </form><br><br>
-                <h2 style="text-align: left; font-size: 20pt; color: #2460A7ff">Select items to fill out your to do list: </h2><br><br>
-                <!--This next section of code contains the set-up for each table with its associated day-->
-                <div id="left">
-                    <h2 id="Monday">Monday</h2>
-                    <p style ="text-align: center;">
-                        <table>
-                            <tr>
-                                <th>Time</th>
-                                <th>Activity</th>
-                            </tr>
-                            <tr>
-                                <td>6am - 7am</td>
-                                <td><textarea rows="1" cols="15" id="mon1"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>7am - 8am</td>
-                                <td><textarea rows="1" cols="15" id="mon2"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>8am - 9am</td>
-                                <td><textarea rows="1" cols="15" id="mon3"></textarea></td>
-                            </tr>
-                            <tr class="even"> 
-                                <td>9am - 10am</td>
-                                <td><textarea rows="1" cols="15" id="mon4"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>10am - 11am</td>
-                                <td><textarea rows="1" cols="15" id="mon5"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>11am - 12pm</td>
-                                <td><textarea rows="1" cols="15" id="mon6"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>12pm - 1pm</td>
-                                <td><textarea rows="1" cols="15" id="mon7"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>1pm - 2pm</td>
-                                <td><textarea rows="1" cols="15" id="mon8"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>2pm - 3pm</td>
-                                <td><textarea rows="1" cols="15" id="mon9"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>3pm - 4pm</td>
-                                <td><textarea rows="1" cols="15" id="mon10"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>4pm - 5pm</td>
-                                <td><textarea rows="1" cols="15" id="mon11"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>5pm - 6pm</td>
-                                <td><textarea rows="1" cols="15" id="mon12"></textarea> </td>
-                                </tr>
-                            <tr>
-                                <td>6pm - 7pm</td>
-                                <td><textarea rows="1" cols="15" id="mon13"></textarea></td>
-                            </tr>
-                        </table></p></div>
-                        <div id="right">
-                    <h2 id="Tuesday" style ="text-align: center;padding-right:50pt;">Tuesday</h2>
-                    <p style ="text-align: center;">
-                        <table>
-                            <tr>
-                                <th>Time</th>
-                                <th>Activity</th>
-                            </tr>
-                            <tr>
-                                <td>6am - 7am</td>
-                                <td><textarea rows="1" cols="15" id="tue1"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>7am - 8am</td>
-                                <td><textarea rows="1" cols="15" id="tue2"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>8am - 9am</td>
-                                <td><textarea rows="1" cols="15" id="tue3"></textarea></td>
-                            </tr>
-                            <tr class="even"> 
-                                <td>9am - 10am</td>
-                                <td><textarea rows="1" cols="15" id="tue4"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>10am - 11am</td>
-                                <td><textarea rows="1" cols="15" id="tue5"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>11am - 12pm</td>
-                                <td><textarea rows="1" cols="15" id="tue6"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>12pm - 1pm</td>
-                                <td><textarea rows="1" cols="15" id="tue7"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>1pm - 2pm</td>
-                                <td><textarea rows="1" cols="15" id="tue8"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>2pm - 3pm</td>
-                                <td><textarea rows="1" cols="15" id="tue9"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>3pm - 4pm</td>
-                                <td><textarea rows="1" cols="15" id="tue10"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>4pm - 5pm</td>
-                                <td><textarea rows="1" cols="15" id="tue11"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>5pm - 6pm</td>
-                                <td><textarea rows="1" cols="15" id="tue12"></textarea> </td>
-                                </tr>
-                            <tr>
-                                <td>6pm - 7pm</td>
-                                <td><textarea rows="1" cols="15" id="tue13"></textarea></td>
-                            </tr>
-                        </table></p></div>
-                        <div id="left">
-                            <h2 id="Wednesday" style ="text-align: center;">Wednesday</h2>
-                        <p style ="text-align: center;">
-                            <table>
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Activity</th>
-                                </tr>
-                                <tr>
-                                    <td>6am - 7am</td>
-                                <td><textarea rows="1" cols="15" id="wed1"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>7am - 8am</td>
-                                <td><textarea rows="1" cols="15" id="wed2"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>8am - 9am</td>
-                                <td><textarea rows="1" cols="15" id="wed3"></textarea></td>
-                            </tr>
-                            <tr class="even"> 
-                                <td>9am - 10am</td>
-                                <td><textarea rows="1" cols="15" id="wed4"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>10am - 11am</td>
-                                <td><textarea rows="1" cols="15" id="wed5"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>11am - 12pm</td>
-                                <td><textarea rows="1" cols="15" id="wed6"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>12pm - 1pm</td>
-                                <td><textarea rows="1" cols="15" id="wed7"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>1pm - 2pm</td>
-                                <td><textarea rows="1" cols="15" id="wed8"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>2pm - 3pm</td>
-                                <td><textarea rows="1" cols="15" id="wed9"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>3pm - 4pm</td>
-                                <td><textarea rows="1" cols="15" id="wed10"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>4pm - 5pm</td>
-                                <td><textarea rows="1" cols="15" id="wed11"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>5pm - 6pm</td>
-                                <td><textarea rows="1" cols="15" id="wed12"></textarea> </td>
-                                </tr>
-                            <tr>
-                                <td>6pm - 7pm</td>
-                                <td><textarea rows="1" cols="15" id="wed13"></textarea></td>
-                            </tr>
-                            </table></p></div></div>
-                        <div id="right">
-                        <h2 id="Thursday" style ="text-align: center;">Thursday</h2>
-                    <p style ="text-align: center;">
-                        <table>
-                            <tr>
-                                <th>Time</th>
-                                <th>Activity</th>
-                            </tr>
-                            <tr>
-                                <td>6am - 7am</td>
-                                <td><textarea rows="1" cols="15" id="thur1"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>7am - 8am</td>
-                                <td><textarea rows="1" cols="15" id="thur2"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>8am - 9am</td>
-                                <td><textarea rows="1" cols="15" id="thur3"></textarea></td>
-                            </tr>
-                            <tr class="even"> 
-                                <td>9am - 10am</td>
-                                <td><textarea rows="1" cols="15" id="thur4"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>10am - 11am</td>
-                                <td><textarea rows="1" cols="15" id="thur5"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>11am - 12pm</td>
-                                <td><textarea rows="1" cols="15" id="thur6"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>12pm - 1pm</td>
-                                <td><textarea rows="1" cols="15" id="thur7"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>1pm - 2pm</td>
-                                <td><textarea rows="1" cols="15" id="thur8"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>2pm - 3pm</td>
-                                <td><textarea rows="1" cols="15" id="thur9"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>3pm - 4pm</td>
-                                <td><textarea rows="1" cols="15" id="thur10"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>4pm - 5pm</td>
-                                <td><textarea rows="1" cols="15" id="thur11"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>5pm - 6pm</td>
-                                <td><textarea rows="1" cols="15" id="thur12"></textarea> </td>
-                                </tr>
-                            <tr>
-                                <td>6pm - 7pm</td>
-                                <td><textarea rows="1" cols="15" id="thur13"></textarea></td>
-                            </tr>
-                        </table></p></div></div>
-                        <div id="center">
-                        <h2 id="friday" style ="text-align: center;">Friday</h2>
-                        <p style ="text-align: center;">
-                        <table>
-                            <tr>
-                                <th>Time</th>
-                                <th>Activity</th>
-                            </tr>
-                            <tr>
-                                <td>6am - 7am</td>
-                                <td><textarea rows="1" cols="15" id="fri1"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>7am - 8am</td>
-                                <td><textarea rows="1" cols="15" id="fri2"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>8am - 9am</td>
-                                <td><textarea rows="1" cols="15" id="fri3"></textarea></td>
-                            </tr>
-                            <tr class="even"> 
-                                <td>9am - 10am</td>
-                                <td><textarea rows="1" cols="15" id="fri4"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>10am - 11am</td>
-                                <td><textarea rows="1" cols="15" id="fri5"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>11am - 12pm</td>
-                                <td><textarea rows="1" cols="15" id="fri6"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>12pm - 1pm</td>
-                                <td><textarea rows="1" cols="15" id="fri7"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>1pm - 2pm</td>
-                                <td><textarea rows="1" cols="15" id="fri8"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>2pm - 3pm</td>
-                                <td><textarea rows="1" cols="15" id="fri9"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>3pm - 4pm</td>
-                                <td><textarea rows="1" cols="15" id="fri10"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>4pm - 5pm</td>
-                                <td><textarea rows="1" cols="15" id="fri11"></textarea></td>
-                            </tr>
-                            <tr class="even">
-                                <td>5pm - 6pm</td>
-                                <td><textarea rows="1" cols="15" id="fri12"></textarea> </td>
-                                </tr>
-                            <tr>
-                                <td>6pm - 7pm</td>
-                                <td><textarea rows="1" cols="15" id="fri13"></textarea></td>
-                            </tr>
-                        </table></p></div>
-                <p style="text-align: center;padding-right: 50px;"><a href="#top">Top</a></p>
-                <!--Buttons to save the page and clear the page-->
-                <div id="botttonBtns" style="text-align: center;  padding-right:30px; padding-bottom: 50px;">
-                <button onclick="reset()">Reset Week</button><button id="resetWeek" onclick="save()">Save Week</button></div>
-              </body>    
-                <footer>
-                    <header style="background-color:rgb(209, 151, 151);">
-                    <h2 style="color:#2460A7ff"><i>fitX<sub style="font-size: 9pt;">by RJCAN</sub></i></h2></header>
-                </footer>          
-    <script>
-        // function to reset the local storage
-      function reset()
-      {
+    </div>
+    <ul>
+        <!--This will link to a new page associated with each day-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="HTML/monday.html">Monday</a></li>
+        <li><a href="HTML/tuesday.html">Tuesday</a></li>
+        <li><a href="HTML/wednesday.html">Wednesday</a></li>
+        <li><a href="HTML/thursday.html">Thursday</a></li>
+        <li><a href="HTML/friday.html">Friday</a></li>
+        <li><a href="HTML/saturday.html">Saturday</a></li>
+        <li><a href="HTML/sunday.html">Sunday</a></li>
+    </ul>
+    <p><b>Hi welcome to fitX!</b><br> This is the app where you can accomplish all your physical and mental goals.
+        <br>Use this app to create to-do lists, set reminders, set workouts, and track your progress.
+    </p>
+    <br>
+    <!--Table for the weekly summary display-->
+    <h2 style="color: #2460A7ff; text-align: left;">Weekly Summary:</h2><br>
+    <form id="weeklySummary">
+        <table id="weeklySummary"
+            style="text-align: left;border-top:2px solid lightblue;border-bottom: 2px solid lightblue;border-left:2px solid lightblue; border-right:2px solid lightblue;font-family: 'Courier New', Courier, monospace;">
+            <tr>
+                <th style="border-top: transparent;"></th>
+                <th style="border-top: transparent;">Monday</th>
+                <th style="border-top: transparent;">Tuesday</th>
+                <th style="border-top: transparent;">Wednesday</th>
+                <th style="border-top: transparent;">Thursday</th>
+                <th style="border-top: transparent;">Friday</th>
+                <th style="border-top: transparent;">Saturday</th>
+                <th style="border-top: transparent;">Sunday</th>
+            </tr>
+            <tr>
+                <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Workout Time</td>
+                <td id="monWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue"> <span
+                        id=mondayWkt></span></td>
+                <td id="tuesWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue"> <span
+                        id=tuesdayWkt></span></td>
+                <td id="wednesdayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue"> <span
+                        id=wedWkt></span></td>
+                <td id="thursdayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue"> <span
+                        id=thursWkt></span></td>
+                <td id="fridayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue"> <span
+                        id=friWkt></span></td>
+                <td id="saturdayWorkout" style="width:100px; text-align:center;border-right:2px solid lightblue"> <span
+                        id=satWkt></span></td>
+                <td id="sundayWorkout" style="width:100px; text-align:center;"> <span id=sunWkt></span></td>
+            </tr>
+            <tr class="even">
+                <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Mood Rating</td>
+                <td id="modayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=mondayMood></span></td>
+                <td id="tuesdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=tuesdayMood></span></td>
+                <td id="wednesdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=wedMood></span></td>
+                <td id="thursdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=thursMood></span></td>
+                <td id="fridayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=friMood></span></td>
+                <td id="saturdayMood" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=satMood></span></td>
+                <td id="sundayMood" style="width:100px; text-align:center;"><span id=sunMood></span></td>
+            </tr>
+            <tr>
+                <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Soreness Rating</td>
+                <td id="mondaySoreness" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=monSore></span></td>
+                <td id="tuesdaySoreness" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=tuesSore></span></td>
+                <td id="wednesdaySoreness" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=wedSore></span></td>
+                <td id="thursdaySore" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=thursSore></span></td>
+                <td id="fridaySore" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=friSore></span></td>
+                <td id="saturdaySore" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=satSore></span></td>
+                <td id="sundaySore" style="width:100px; text-align:center;"><span id=sunSore></span></td>
+            </tr>
+            <tr class="even">
+                <td style="border-right:2px solid lightblue;width:200px;text-align: center;">Water Intake</td>
+                <td id="mondayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=monWater></span></td>
+                <td id="tuesdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=tuesWater></span></td>
+                <td id="wednesdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=wedWater></span></td>
+                <td id="thursdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=thursWater></span></td>
+                <td id="fridayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=friWater></span></td>
+                <td id="saturdayWater" style="width:100px; text-align:center;border-right:2px solid lightblue"><span
+                        id=satWater></span></td>
+                <td id="sundayWater" style="width:100px; text-align:center;"><span id=sunWater></span></td>
+            </tr>
+        </table>
+    </form><br><br>
+    <h2 style="text-align: left; font-size: 20pt; color: #2460A7ff">Select items to fill out your to do list: </h2>
+    <br><br>
+    <!--This next section of code contains the set-up for each table with its associated day-->
+    <div id="left">
+        <h2 id="Monday">Monday</h2>
+        <p style="text-align: center;">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>6am - 7am</td>
+                <td><textarea id="mon1" rows="1" cols="15"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>7am - 8am</td>
+                <td><textarea rows="1" cols="15" id="mon2"></textarea></td>
+            </tr>
+            <tr>
+                <td>8am - 9am</td>
+                <td><textarea rows="1" cols="15" id="mon3"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>9am - 10am</td>
+                <td><textarea rows="1" cols="15" id="mon4"></textarea></td>
+            </tr>
+            <tr>
+                <td>10am - 11am</td>
+                <td><textarea rows="1" cols="15" id="mon5"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>11am - 12pm</td>
+                <td><textarea rows="1" cols="15" id="mon6"></textarea></td>
+            </tr>
+            <tr>
+                <td>12pm - 1pm</td>
+                <td><textarea rows="1" cols="15" id="mon7"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>1pm - 2pm</td>
+                <td><textarea rows="1" cols="15" id="mon8"></textarea></td>
+            </tr>
+            <tr>
+                <td>2pm - 3pm</td>
+                <td><textarea rows="1" cols="15" id="mon9"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>3pm - 4pm</td>
+                <td><textarea rows="1" cols="15" id="mon10"></textarea></td>
+            </tr>
+            <tr>
+                <td>4pm - 5pm</td>
+                <td><textarea rows="1" cols="15" id="mon11"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>5pm - 6pm</td>
+                <td><textarea rows="1" cols="15" id="mon12"></textarea> </td>
+            </tr>
+            <tr>
+                <td>6pm - 7pm</td>
+                <td><textarea rows="1" cols="15" id="mon13"></textarea></td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    <div id="right">
+        <h2 id="Tuesday" style="text-align: center;padding-right:50pt;">Tuesday</h2>
+        <p style="text-align: center;">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>6am - 7am</td>
+                <td><textarea rows="1" cols="15" id="tue1"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>7am - 8am</td>
+                <td><textarea rows="1" cols="15" id="tue2"></textarea></td>
+            </tr>
+            <tr>
+                <td>8am - 9am</td>
+                <td><textarea rows="1" cols="15" id="tue3"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>9am - 10am</td>
+                <td><textarea rows="1" cols="15" id="tue4"></textarea></td>
+            </tr>
+            <tr>
+                <td>10am - 11am</td>
+                <td><textarea rows="1" cols="15" id="tue5"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>11am - 12pm</td>
+                <td><textarea rows="1" cols="15" id="tue6"></textarea></td>
+            </tr>
+            <tr>
+                <td>12pm - 1pm</td>
+                <td><textarea rows="1" cols="15" id="tue7"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>1pm - 2pm</td>
+                <td><textarea rows="1" cols="15" id="tue8"></textarea></td>
+            </tr>
+            <tr>
+                <td>2pm - 3pm</td>
+                <td><textarea rows="1" cols="15" id="tue9"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>3pm - 4pm</td>
+                <td><textarea rows="1" cols="15" id="tue10"></textarea></td>
+            </tr>
+            <tr>
+                <td>4pm - 5pm</td>
+                <td><textarea rows="1" cols="15" id="tue11"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>5pm - 6pm</td>
+                <td><textarea rows="1" cols="15" id="tue12"></textarea> </td>
+            </tr>
+            <tr>
+                <td>6pm - 7pm</td>
+                <td><textarea rows="1" cols="15" id="tue13"></textarea></td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    <div id="left">
+        <h2 id="Wednesday" style="text-align: center;">Wednesday</h2>
+        <p style="text-align: center;">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>6am - 7am</td>
+                <td><textarea rows="1" cols="15" id="wed1"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>7am - 8am</td>
+                <td><textarea rows="1" cols="15" id="wed2"></textarea></td>
+            </tr>
+            <tr>
+                <td>8am - 9am</td>
+                <td><textarea rows="1" cols="15" id="wed3"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>9am - 10am</td>
+                <td><textarea rows="1" cols="15" id="wed4"></textarea></td>
+            </tr>
+            <tr>
+                <td>10am - 11am</td>
+                <td><textarea rows="1" cols="15" id="wed5"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>11am - 12pm</td>
+                <td><textarea rows="1" cols="15" id="wed6"></textarea></td>
+            </tr>
+            <tr>
+                <td>12pm - 1pm</td>
+                <td><textarea rows="1" cols="15" id="wed7"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>1pm - 2pm</td>
+                <td><textarea rows="1" cols="15" id="wed8"></textarea></td>
+            </tr>
+            <tr>
+                <td>2pm - 3pm</td>
+                <td><textarea rows="1" cols="15" id="wed9"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>3pm - 4pm</td>
+                <td><textarea rows="1" cols="15" id="wed10"></textarea></td>
+            </tr>
+            <tr>
+                <td>4pm - 5pm</td>
+                <td><textarea rows="1" cols="15" id="wed11"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>5pm - 6pm</td>
+                <td><textarea rows="1" cols="15" id="wed12"></textarea> </td>
+            </tr>
+            <tr>
+                <td>6pm - 7pm</td>
+                <td><textarea rows="1" cols="15" id="wed13"></textarea></td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    </div>
+    <div id="right">
+        <h2 id="Thursday" style="text-align: center;">Thursday</h2>
+        <p style="text-align: center;">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>6am - 7am</td>
+                <td><textarea rows="1" cols="15" id="thur1"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>7am - 8am</td>
+                <td><textarea rows="1" cols="15" id="thur2"></textarea></td>
+            </tr>
+            <tr>
+                <td>8am - 9am</td>
+                <td><textarea rows="1" cols="15" id="thur3"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>9am - 10am</td>
+                <td><textarea rows="1" cols="15" id="thur4"></textarea></td>
+            </tr>
+            <tr>
+                <td>10am - 11am</td>
+                <td><textarea rows="1" cols="15" id="thur5"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>11am - 12pm</td>
+                <td><textarea rows="1" cols="15" id="thur6"></textarea></td>
+            </tr>
+            <tr>
+                <td>12pm - 1pm</td>
+                <td><textarea rows="1" cols="15" id="thur7"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>1pm - 2pm</td>
+                <td><textarea rows="1" cols="15" id="thur8"></textarea></td>
+            </tr>
+            <tr>
+                <td>2pm - 3pm</td>
+                <td><textarea rows="1" cols="15" id="thur9"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>3pm - 4pm</td>
+                <td><textarea rows="1" cols="15" id="thur10"></textarea></td>
+            </tr>
+            <tr>
+                <td>4pm - 5pm</td>
+                <td><textarea rows="1" cols="15" id="thur11"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>5pm - 6pm</td>
+                <td><textarea rows="1" cols="15" id="thur12"></textarea> </td>
+            </tr>
+            <tr>
+                <td>6pm - 7pm</td>
+                <td><textarea rows="1" cols="15" id="thur13"></textarea></td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    </div>
+    <div id="center">
+        <h2 id="friday" style="text-align: center;">Friday</h2>
+        <p style="text-align: center;">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+            <tr>
+                <td>6am - 7am</td>
+                <td><textarea rows="1" cols="15" id="fri1"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>7am - 8am</td>
+                <td><textarea rows="1" cols="15" id="fri2"></textarea></td>
+            </tr>
+            <tr>
+                <td>8am - 9am</td>
+                <td><textarea rows="1" cols="15" id="fri3"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>9am - 10am</td>
+                <td><textarea rows="1" cols="15" id="fri4"></textarea></td>
+            </tr>
+            <tr>
+                <td>10am - 11am</td>
+                <td><textarea rows="1" cols="15" id="fri5"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>11am - 12pm</td>
+                <td><textarea rows="1" cols="15" id="fri6"></textarea></td>
+            </tr>
+            <tr>
+                <td>12pm - 1pm</td>
+                <td><textarea rows="1" cols="15" id="fri7"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>1pm - 2pm</td>
+                <td><textarea rows="1" cols="15" id="fri8"></textarea></td>
+            </tr>
+            <tr>
+                <td>2pm - 3pm</td>
+                <td><textarea rows="1" cols="15" id="fri9"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>3pm - 4pm</td>
+                <td><textarea rows="1" cols="15" id="fri10"></textarea></td>
+            </tr>
+            <tr>
+                <td>4pm - 5pm</td>
+                <td><textarea rows="1" cols="15" id="fri11"></textarea></td>
+            </tr>
+            <tr class="even">
+                <td>5pm - 6pm</td>
+                <td><textarea rows="1" cols="15" id="fri12"></textarea> </td>
+            </tr>
+            <tr>
+                <td>6pm - 7pm</td>
+                <td><textarea rows="1" cols="15" id="fri13"></textarea></td>
+            </tr>
+        </table>
+        </p>
+    </div>
+    <p style="text-align: center;padding-right: 50px;"><a href="#top">Top</a></p>
+    <!--Buttons to save the page and clear the page-->
+    <div id="botttonBtns" style="text-align: center;  padding-right:30px; padding-bottom: 50px;">
+        <button onclick="reset()">Reset Week</button><button id="resetWeek" onclick="save()">Save Week</button><button
+            id="test" onclick="test()"></button>
+    </div>
+</body>
+<footer>
+    <header style="background-color:rgb(209, 151, 151);">
+        <h2 style="color:#2460A7ff"><i>fitX<sub style="font-size: 9pt;">by RJCAN</sub></i></h2>
+    </header>
+</footer>
+<script>
+    // function to reset the local storage
+    function reset() {
         localStorage.clear();
         location.reload();
-      }
-     </script>
-     <script>
-         function test()
-         {
-             
-         }
-     </script>
-      <script>
+    }
+</script>
+<script>
+    function test() {
+        let testtext = "save test 1";
+        let testtext2 = "Not save test 1";
+        //monday test
+        localStorage.setItem("mon1", testtext);
+        document.getElementById("mon1").innerHTML = testtext;
 
-         //timer get save
-       let temp1 = localStorage.getItem('mondayTimer');
-       let temp2 = localStorage.getItem('tuesdayTimer');
-       document.getElementById("mondayWkt").innerHTML = temp1;
-       document.getElementById("tuesdayWkt").innerHTML = temp2;
-       let temp3 = localStorage.getItem('wednesdayTimer');
-        temp2 = localStorage.getItem('thursdayTimer');
-       document.getElementById("wedWkt").innerHTML = temp3;
-       document.getElementById("thursWkt").innerHTML = temp2;
-       temp1 = localStorage.getItem('fridayTimer');
-       temp2 = localStorage.getItem('saturdayTimer');
-       document.getElementById("friWkt").innerHTML = temp1;
-       document.getElementById("satWkt").innerHTML = temp2;
-       temp1 = localStorage.getItem('sundayTimer');
-       document.getElementById("sunWkt").innerHTML = temp1;
-  
+        document.getElementById("mon2").innerHTML = testtext2;
 
-        //mood get save
-        temp1 = localStorage.getItem('mondayMoodRating');
-        temp2 = localStorage.getItem('tuesdayMoodRating');
-       document.getElementById("mondayMood").innerHTML = temp1;
-       document.getElementById("tuesdayMood").innerHTML = temp2;
-       temp1 = localStorage.getItem('wednesdayMoodRating');
-        temp2 = localStorage.getItem('thursdayMoodRating');
-       document.getElementById("wedMood").innerHTML = temp1;
-       document.getElementById("thursMood").innerHTML = temp2;
-       temp1 = localStorage.getItem('fridayMoodRating');
-       temp2 = localStorage.getItem('saturdayMoodRating');
-       document.getElementById("friMood").innerHTML = temp1;
-       document.getElementById("satMood").innerHTML = temp2;
-       temp2 = localStorage.getItem('sundayMoodRating');
-       document.getElementById("sundayMood").innerHTML = temp2;
+        //Tue test
+        localStorage.setItem("tue1", testtext);
+        document.getElementById("tue1").innerHTML = testtext;
 
-       //sore get save
-       temp1 = localStorage.getItem('mondaySoreRating');
-        temp2 = localStorage.getItem('tuesdaySoreRating');
-       document.getElementById("monSore").innerHTML = temp1;
-       document.getElementById("tuesSore").innerHTML = temp2;
-       temp1 = localStorage.getItem('wednesdaySoreRating');
-        temp2 = localStorage.getItem('thursdaySoreRating');
-       document.getElementById("wedSore").innerHTML = temp1;
-       document.getElementById("thursSore").innerHTML = temp2;
-       temp1 = localStorage.getItem('fridaySoreRating');
-       temp2 = localStorage.getItem('saturdaySoreRating');
-       document.getElementById("friSore").innerHTML = temp1;
-       document.getElementById("satSore").innerHTML = temp2;
-       temp2 = localStorage.getItem('sundaySoreRating');
-       document.getElementById("sunSore").innerHTML = temp2;
+        document.getElementById("tue2").innerHTML = testtext2;
 
-        //water get save
-        temp1 = localStorage.getItem('mondayWater');
-        temp2 = localStorage.getItem('tuesdayWater');
-       document.getElementById("monWater").innerHTML = temp1;
-       document.getElementById("tuesWater").innerHTML = temp2;
-       temp1 = localStorage.getItem('wednesdayWater');
-        temp2 = localStorage.getItem('thursdayWater');
-       document.getElementById("wedWater").innerHTML = temp1;
-       document.getElementById("thursWater").innerHTML = temp2;
-       temp1 = localStorage.getItem('fridayWater');
-       temp2 = localStorage.getItem('saturdayWater');
-       document.getElementById("friWater").innerHTML = temp1;
-       document.getElementById("satWater").innerHTML = temp2;
-       temp2 = localStorage.getItem('sundayWater');
-       document.getElementById("sunWater").innerHTML = temp2;
+        //Wed test
+        localStorage.setItem("wed1", testtext);
+        document.getElementById("wed1").innerHTML = testtext;
 
-     </script>
+        document.getElementById("wed2").innerHTML = testtext2;
+
+        //Thur test
+        localStorage.setItem("thur1", testtext);
+        document.getElementById("thur1").innerHTML = testtext;
+
+        document.getElementById("thur2").innerHTML = testtext2;
+
+        //Fri test
+        localStorage.setItem("fri1", testtext);
+        document.getElementById("fri1").innerHTML = testtext;
+
+        document.getElementById("fri2").innerHTML = testtext2;
+
+        alert("Test 1 Strat. Will reload to test not save data on 5s.")
+        setTimeout(function () {
+            location.reload();
+            alert("Test 1 Done. ");
+        }, 5 * 1000);
+        
+    }
+</script>
+<script>
+
+    //timer get save
+    let temp1 = localStorage.getItem('mondayTimer');
+    let temp2 = localStorage.getItem('tuesdayTimer');
+    document.getElementById("mondayWkt").innerHTML = temp1;
+    document.getElementById("tuesdayWkt").innerHTML = temp2;
+    let temp3 = localStorage.getItem('wednesdayTimer');
+    temp2 = localStorage.getItem('thursdayTimer');
+    document.getElementById("wedWkt").innerHTML = temp3;
+    document.getElementById("thursWkt").innerHTML = temp2;
+    temp1 = localStorage.getItem('fridayTimer');
+    temp2 = localStorage.getItem('saturdayTimer');
+    document.getElementById("friWkt").innerHTML = temp1;
+    document.getElementById("satWkt").innerHTML = temp2;
+    temp1 = localStorage.getItem('sundayTimer');
+    document.getElementById("sunWkt").innerHTML = temp1;
+
+
+    //mood get save
+    temp1 = localStorage.getItem('mondayMoodRating');
+    temp2 = localStorage.getItem('tuesdayMoodRating');
+    document.getElementById("mondayMood").innerHTML = temp1;
+    document.getElementById("tuesdayMood").innerHTML = temp2;
+    temp1 = localStorage.getItem('wednesdayMoodRating');
+    temp2 = localStorage.getItem('thursdayMoodRating');
+    document.getElementById("wedMood").innerHTML = temp1;
+    document.getElementById("thursMood").innerHTML = temp2;
+    temp1 = localStorage.getItem('fridayMoodRating');
+    temp2 = localStorage.getItem('saturdayMoodRating');
+    document.getElementById("friMood").innerHTML = temp1;
+    document.getElementById("satMood").innerHTML = temp2;
+    temp2 = localStorage.getItem('sundayMoodRating');
+    document.getElementById("sundayMood").innerHTML = temp2;
+
+    //sore get save
+    temp1 = localStorage.getItem('mondaySoreRating');
+    temp2 = localStorage.getItem('tuesdaySoreRating');
+    document.getElementById("monSore").innerHTML = temp1;
+    document.getElementById("tuesSore").innerHTML = temp2;
+    temp1 = localStorage.getItem('wednesdaySoreRating');
+    temp2 = localStorage.getItem('thursdaySoreRating');
+    document.getElementById("wedSore").innerHTML = temp1;
+    document.getElementById("thursSore").innerHTML = temp2;
+    temp1 = localStorage.getItem('fridaySoreRating');
+    temp2 = localStorage.getItem('saturdaySoreRating');
+    document.getElementById("friSore").innerHTML = temp1;
+    document.getElementById("satSore").innerHTML = temp2;
+    temp2 = localStorage.getItem('sundaySoreRating');
+    document.getElementById("sunSore").innerHTML = temp2;
+
+    //water get save
+    temp1 = localStorage.getItem('mondayWater');
+    temp2 = localStorage.getItem('tuesdayWater');
+    document.getElementById("monWater").innerHTML = temp1;
+    document.getElementById("tuesWater").innerHTML = temp2;
+    temp1 = localStorage.getItem('wednesdayWater');
+    temp2 = localStorage.getItem('thursdayWater');
+    document.getElementById("wedWater").innerHTML = temp1;
+    document.getElementById("thursWater").innerHTML = temp2;
+    temp1 = localStorage.getItem('fridayWater');
+    temp2 = localStorage.getItem('saturdayWater');
+    document.getElementById("friWater").innerHTML = temp1;
+    document.getElementById("satWater").innerHTML = temp2;
+    temp2 = localStorage.getItem('sundayWater');
+    document.getElementById("sunWater").innerHTML = temp2;
+
+</script>
+
 </html>
