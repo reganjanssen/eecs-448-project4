@@ -130,7 +130,7 @@ background-color: #F0F6F7FF;
 color: #086fc4;
 font-family: 'Courier New', Courier, monospace;
 text-align: center;
-font-size:12pt;
+font-size:11pt;
 }
 #left {
 float:left;
@@ -144,5 +144,5 @@ padding-right:50pt;
 float:center;
 }
 #friday {
-padding-top: 70%;
+padding-top: 75%;
 }
