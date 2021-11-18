@@ -85,16 +85,9 @@ function end() {
   let playButton = document.getElementById("playButton");
   let pauseButton = document.getElementById("pauseButton");
   let resetButton = document.getElementById("resetButton");
-  let endButton = document.getElementById("endButton");
   
   playButton.addEventListener("click", start);
   pauseButton.addEventListener("click", pause);
   resetButton.addEventListener("click", reset);
-  // endButton.addEventListener("click", end);
 
-//get the workout time.
-function timeLog()
-  {
-      //where we have to set up to? 
-     //document.getElementById("???").innerHTML = "Workout Time : "timeCal;
-  }
+
